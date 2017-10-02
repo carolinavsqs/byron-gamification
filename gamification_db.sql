@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Out-2017 às 01:15
+-- Generation Time: 02-Out-2017 às 02:13
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -56,6 +56,18 @@ INSERT INTO `guilda` (`id`, `name`, `valuesGuilda`, `description`, `crest`) VALU
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `log`
+--
+
+CREATE TABLE `log` (
+  `id` int(11) NOT NULL,
+  `id_user` varchar(20) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `patchnote`
 --
 
@@ -93,15 +105,16 @@ CREATE TABLE `usuario` (
   `class` varchar(50) DEFAULT NULL,
   `exp` double DEFAULT NULL,
   `notActive` tinyint(1) DEFAULT NULL,
-  `id_guild` int(11) DEFAULT NULL
+  `id_guild` int(11) DEFAULT NULL,
+  `picture` varchar(256) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`user`, `password`, `name`, `class`, `exp`, `notActive`, `id_guild`) VALUES
-('degepe', '123dgp321', 'Gabriel', 'Bardo', 0, 0, 1);
+INSERT INTO `usuario` (`user`, `password`, `name`, `class`, `exp`, `notActive`, `id_guild`, `picture`) VALUES
+('degepe', '123dgp321', 'Gabriel', 'Bardo', 0, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -129,6 +142,13 @@ ALTER TABLE `conquista`
 --
 ALTER TABLE `guilda`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `log`
+--
+ALTER TABLE `log`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `patchnote`
@@ -161,6 +181,12 @@ ALTER TABLE `usuario_conquista`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Limitadores para a tabela `log`
+--
+ALTER TABLE `log`
+  ADD CONSTRAINT `log_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuario` (`user`);
 
 --
 -- Limitadores para a tabela `patchnote`
