@@ -25,13 +25,14 @@ $input_password       	= mysqli_real_escape_string($conn,$input_password);
     {
         echo "<script>alert ('Usuario ou senha errada!');
             </script>";
-        exit;
+        echo "Voce não é digno aventureiro";
     }
     else
     {
         session_start ();
 		echo "<script>alert ('Bem Vindo');
            </script>";
+		echo "Olá aventureiro";
     }
 
 ?>
