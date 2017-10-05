@@ -23,8 +23,8 @@ $input_password       	= mysqli_real_escape_string($conn,$input_password);
 
     if ((!$queryResult) or ((mysqli_num_rows ($queryResult)) < 1))
     {
-        echo "<script>alert ('Invalid email or password!');
-            window.location.href='../index.php'</script>";
+        echo "<script>alert ('Usuario ou senha errada!');
+            </script>";
         exit;
     }
     else
