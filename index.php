@@ -55,13 +55,12 @@
 					<img src="img_avatar4.png" style="width:30%" class="img_login">
 					<p class="header_login_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador. - Identifique-se!"</p>
 				</div>
-				<!-- <form class="form_login" action="/action_page.php"> -->
-				<form class="form_login">
-					<form class="form_login" action="./login.php" method="POST">
+	
+					<form class="form_login" action="login.php" method="POST">
 						<input class="form_login_input form_login_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
 						<input class="form_login_input" type="password" placeholder="Senha" name="psw" required>
 						<button class="login_button_internal login_button_internal_submit" type="submit">PASSAR PELOS PORTÕES</button>
-					</div>
+
 				</form>
 			</div>
 		  </div>
