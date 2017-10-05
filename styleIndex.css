@@ -43,7 +43,7 @@
 {
 	z-index: 3;
 	display: none;
-	padding-top: 10%;
+	padding-top: 5%;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -111,6 +111,13 @@
 .header_login
 {
 	text-align: center;
+}
+
+.header_login_text
+{
+	font-family: 'Inconsolata', monospace;
+	padding-top: 20px;
+	font-style: bold;
 }
 
 .img_login
