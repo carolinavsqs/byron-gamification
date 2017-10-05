@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!-- CSS -->
-        <link rel="stylesheet" href="styleIndex.css" type="text/css">
+        <link rel="stylesheet" href="./CSS/styleIndex.css" type="text/css">
 		<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!--FONT AWESOME -->
@@ -27,12 +27,12 @@
 						<span class="container_login_button_external_text">login</div>
 					</div>
 					<!-- END LOGIN BUTTON TELA PRINCIPAL -->
-				<div class="carousel-item active" style="background-image: url('backgrounds/1.jpg')">
+				<div class="carousel-item active" style="background-image: url('./Imagens/backgrounds/1.jpg')">
 				</div>
-				<div class="carousel-item" style="background-image: url('backgrounds/2.jpg')">
+				<div class="carousel-item" style="background-image: url('./Imagens/backgrounds/2.jpg')">
 					
 				</div>
-				<div class="carousel-item" style="background-image: url('backgrounds/3.jpg')">
+				<div class="carousel-item" style="background-image: url('./Imagens/backgrounds/3.jpg')">
 					
 				</div>
 			</div>
