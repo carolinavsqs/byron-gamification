@@ -1,3 +1,7 @@
+*{
+    overflow-x: hidden;
+    overflor-y: hidden;
+}
 .carousel-item
 {
     height: 100vh;
