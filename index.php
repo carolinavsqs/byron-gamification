@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!-- CSS -->
-        <link rel="stylesheet" href="./CSS/styleIndex.css" type="text/css">
+        <link rel="stylesheet" href="_css/styleIndex.css" type="text/css">
 		<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
         <!--FONT AWESOME -->
@@ -27,12 +27,12 @@
 						<span class="container_login_button_external_text">login</div>
 					</div>
 					<!-- END LOGIN BUTTON TELA PRINCIPAL -->
-				<div class="carousel-item active" style="background-image: url('./Imagens/backgrounds/1.jpg')">
+				<div class="carousel-item active" style="background-image: url('_img/backgrounds/1.jpg')">
 				</div>
-				<div class="carousel-item" style="background-image: url('./Imagens/backgrounds/2.jpg')">
+				<div class="carousel-item" style="background-image: url('_img/backgrounds/2.jpg')">
 					
 				</div>
-				<div class="carousel-item" style="background-image: url('./Imagens/backgrounds/3.jpg')">
+				<div class="carousel-item" style="background-image: url('_img/backgrounds/3.jpg')">
 					
 				</div>
 			</div>
@@ -56,7 +56,7 @@
 					<p class="header_login_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador. - Identifique-se!"</p>
 				</div>
 	
-					<form class="form_login" action="./PHP/login.php" method="POST">
+					<form class="form_login" action="_controller/login.php" method="POST">
 						<input class="form_login_input form_login_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
 						<input class="form_login_input" type="password" placeholder="Senha" name="psw" required>
 						<button class="login_button_internal login_button_internal_submit" type="submit">PASSAR PELOS PORTÕES</button>
