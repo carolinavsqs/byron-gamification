@@ -1,3 +1,9 @@
+<?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -21,11 +27,20 @@
 				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 			</ol>
 			<div class="carousel-inner">
-					<!-- LOGIN BUTTON TELA PRINCIPAL -->
-					<div onclick="document.getElementById('login').style.display='block'" class="container_login_button_external">
-						<span class="fa fa-user-o container_login_button_external_img" aria-hidden="true"></span>
-						<span class="container_login_button_external_text">login</div>
-					</div>
+                    <?php if(!isset($_SESSION['byron_gamification']['user'])): ?>
+                        <!-- LOGIN BUTTON TELA PRINCIPAL -->
+                        <div onclick="document.getElementById('login').style.display='block'" class="container_login_button_external">
+                            <span class="fa fa-user-o container_login_button_external_img" aria-hidden="true"></span>
+                            <span class="container_login_button_external_text">login</div>
+                        </div>
+                    <?php else: ?>
+                        <div class="container_login_button_external">
+                            <span class="fa fa-user-o container_login_button_external_img" aria-hidden="true"></span>
+                            <span class="container_login_button_external_text"><a href="_view/home.php">Home</a></div>
+                        </div>
+                    <?php endif; ?>
+
+
 					<!-- END LOGIN BUTTON TELA PRINCIPAL -->
 				<div class="carousel-item active" style="background-image: url('_img/backgrounds/1.jpg')">
 				</div>

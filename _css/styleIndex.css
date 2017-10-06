@@ -182,3 +182,10 @@
     -moz-transition: background-color color .75s ease-in-out;
     -webkit-transition: background-color color .75 ease-in-out;
 }
+
+.container_login_button_external_text a{
+	color:white;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
