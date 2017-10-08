@@ -13,5 +13,6 @@
 </head>
 <body>
     <h1>Só você pode me ouvir, invocador. Que obra prima devemos tocar hoje?!</h1>
+    <a href='/gamification/_controller/logout.php'>Clique aqui para deixar a cidade!</a>
 </body>
 </html>
