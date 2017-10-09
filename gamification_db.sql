@@ -100,7 +100,7 @@ CREATE TABLE `trofeu` (
 
 CREATE TABLE `usuario` (
   `user` varchar(15) NOT NULL,
-  `password` varchar(25) NOT NULL,
+  `password` varchar(70) NOT NULL,
   `name` varchar(50) NOT NULL,
   `class` varchar(50) DEFAULT NULL,
   `exp` double DEFAULT NULL,

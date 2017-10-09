@@ -17,6 +17,8 @@ $input_password         = stripslashes($input_password);
 $input_usuario   		= mysqli_real_escape_string($conn,$input_usuario);
 $input_password       	= mysqli_real_escape_string($conn,$input_password);
 
+$input_password         = hash("sha256", $input_password);
+
 $queryText = "SELECT * FROM `usuario` WHERE `user` LIKE '".$input_usuario."' AND `password` LIKE '".$input_password."'";
 $queryResult = mysqli_query ($conn, $queryText);
 
