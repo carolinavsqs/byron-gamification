@@ -25,8 +25,10 @@ $queryResult = mysqli_query ($conn, $queryText);
 if ((!$queryResult) or ((mysqli_num_rows ($queryResult)) < 1))
 {
 
-    echo "<script>alert ('Usuario ou senha errada!');</script>";
-    echo ("<script'>location.href='../index.php';</script>");
+    echo "<script> 
+        alert('Usuario ou Senha incorretos!');
+        window.location.href='../index.php';
+    </script>";
 }
 else
 {
