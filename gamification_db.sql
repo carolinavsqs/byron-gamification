@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 02-Out-2017 às 02:13
+-- Generation Time: 10-Out-2017 às 23:48
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -62,7 +62,8 @@ INSERT INTO `guilda` (`id`, `name`, `valuesGuilda`, `description`, `crest`) VALU
 CREATE TABLE `log` (
   `id` int(11) NOT NULL,
   `id_user` varchar(20) DEFAULT NULL,
-  `description` varchar(100) DEFAULT NULL
+  `description` varchar(100) DEFAULT NULL,
+  `type` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -100,21 +101,30 @@ CREATE TABLE `trofeu` (
 
 CREATE TABLE `usuario` (
   `user` varchar(15) NOT NULL,
-  `password` varchar(70) NOT NULL,
+  `password` varchar(256) NOT NULL,
   `name` varchar(50) NOT NULL,
   `class` varchar(50) DEFAULT NULL,
   `exp` double DEFAULT NULL,
   `notActive` tinyint(1) DEFAULT NULL,
   `id_guild` int(11) DEFAULT NULL,
-  `picture` varchar(256) DEFAULT NULL
+  `picture` varchar(256) DEFAULT NULL,
+  `isDirector` tinyint(1) NOT NULL,
+  `dateBirthday` date NOT NULL,
+  `level` int(11) NOT NULL,
+  `allignment` varchar(255) NOT NULL,
+  `mbti` enum('','INTP','ENTJ','ENTP','INFJ','INFP','ENFJ','ENFP','ISTJ','ISFJ','ESTJ','ESFJ','ISTP','ISFP','ESTP','ESFP','INTJ') DEFAULT NULL,
+  `about` varchar(255) NOT NULL,
+  `attributes` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `expertise` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`user`, `password`, `name`, `class`, `exp`, `notActive`, `id_guild`, `picture`) VALUES
-('degepe', '123dgp321', 'Gabriel', 'Bardo', 0, 0, 1, NULL);
+INSERT INTO `usuario` (`user`, `password`, `name`, `class`, `exp`, `notActive`, `id_guild`, `picture`, `isDirector`, `dateBirthday`, `level`, `allignment`, `mbti`, `about`, `attributes`, `title`, `expertise`) VALUES
+('gabbs', 'A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3', 'gabriel', 'bardo', 0, 0, 1, 'null', 0, '0000-00-00', 0, '', 'INTJ', '', '', '', '');
 
 -- --------------------------------------------------------
 
