@@ -1,6 +1,86 @@
+/* TELA INICIAL */
+
+.screen_one
+{
+	height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	filter: brightness(100%);
+}
+
+.container_info
+{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px #000;
+}
+
+.container_info_title
+{
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	font-size: 70px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.container_info_description
+{
+	font-family: 'EB Garamond', serif;
+	font-size: 20px;
+	text-align: center;
+	display: inline-block;
+	width: 60%;
+	border: 1px dotted #fff;
+	padding: 20px 20px 20px 20px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.container_info_button
+{
+	background-color: transparent;
+	font-family: 'Inconsolata', monospace;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 8px 16px 8px 16px;
+	text-align: center;
+}
+
+.container_info_button > .signal
+{
+	display: none;
+	color: #fff;
+}
+
+.container_info_button:hover
+{
+	cursor: pointer;
+}
+
+.container_info_button:hover > .signal
+{
+	display: block;
+	float: left;
+	margin-right: -10px;
+}
+
+/* END TELA INICIAL */
+
+/* CAROUSEL */
+
 *{
     overflow-x: hidden;
-    overflor-y: hidden;
+    overflow-y: hidden;
 }
 .carousel-item
 {
@@ -11,7 +91,43 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+	filter: brightness(20%);
+	transition: filter .75s ease-in-out;
+    -moz-transition: filter .75s ease-in-out;
+    -webkit-transition: filter .75s ease-in-out;
 }
+
+.carousel-item:hover
+{
+	filter: brightness(100%);
+	transition: filter .75s ease-in-out;
+    -moz-transition: filter .75s ease-in-out;
+    -webkit-transition: filter .75s ease-in-out;
+}
+
+.carousel_big_button
+{
+	color: #fff;
+	background-color: transparent;
+	display: inline-block;
+	font-family: 'Inconsolata', monospace;
+	font-size: 60px;
+	text-transform: uppercase;
+	padding: 8px 16px 8px 16px;
+	width: 30%;
+	text-align: left;
+	line-height: 60px;
+	border: solid #fff 2px;
+}
+
+.carousel_big_button:hover
+{
+	cursor: pointer;
+}
+
+/* END CAROUSEL */
+
+/* LOGIN EXTERNAL */
 
 .container_login_button_external
 {
@@ -43,7 +159,24 @@
 	float: left;
 }
 
-.modal
+.container_login_button_external_text a
+{
+	color: #fff;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+.container_login_button_external_text a:hover
+{
+	color: #fff;
+}
+
+/* END LOGIN EXTERNAL */
+
+/* LOGIN INTERNAL */
+
+.modal_login
 {
 	z-index: 3;
 	display: none;
@@ -58,7 +191,7 @@
 	background-color: rgba(0,0,0,0.4);
 }
 
-.modal_content
+.modal_login_content
 {
 	margin: auto;
 	background-color: #fff;
@@ -82,7 +215,7 @@
 	}
 }
 
-.login_button_internal
+.modal_login_button_internal
 {
 	border: none;
 	display: inline-block;
@@ -98,7 +231,7 @@
 	white-space: nowrap;
 }
 
-.login_button_internal_close
+.modal_login_button_internal_close
 {
 	font-size: 24px;
 	position: absolute;
@@ -106,42 +239,42 @@
 	top:0;
 }
 
-.login_button_internal_close:hover
+.modal_login_button_internal_close:hover
 {
 	color: #fff;
 	background-color: #f44336;
 }
 
-.header_login
+.modal_login_header
 {
 	text-align: center;
 }
 
-.header_login_text
+.modal_login_header_text
 {
 	font-family: 'Inconsolata', monospace;
 	padding-top: 20px;
 	font-style: bold;
 }
 
-.img_login
+.modal_login_img
 {
 	border-radius: 50%;
 	margin-top: 16px;
 }
 
-.form_login
+.modal_login_form
 {
 	padding: 0.01em 16px;
 }
 
-.form_login_container
+.modal_login_form_box
 {
 	margin-top: 16px;
 	margin-bottom: 16px;
 }
 
-.form_login_input
+.modal_login_form_input
 {
 	padding: 8px;
 	display: block;
@@ -152,12 +285,12 @@
 	font-family: 'Inconsolata', monospace;
 }
 
-.form_login_input_name
+.modal_login_form_input_name
 {
 	margin-bottom: 16px;
 }
 
-.login_button_internal_submit
+.modal_login_button_internal_submit
 {	
 	margin-top: 16px;
 	margin-bottom: 16px;
@@ -167,13 +300,14 @@
 	background-color: #b3982c;
 	padding: 8px 16px;
 	font-family: 'Inconsolata', monospace;
+	text-transform: uppercase;
 	border: 1px dotted #b3982c;
     transition: background-color .75s ease-in-out;
     -moz-transition: background-color .75s ease-in-out;
     -webkit-transition: background-color .75s ease-in-out;
 }
 
-.login_button_internal_submit:hover
+.modal_login_button_internal_submit:hover
 {
 	color: #b3982c;
 	background-color: #fff;
@@ -183,9 +317,4 @@
     -webkit-transition: background-color color .75 ease-in-out;
 }
 
-.container_login_button_external_text a{
-	color:white;
-	font-size: 12px;
-	font-family: 'Open Sans', sans-serif;
-	text-transform: uppercase;
-}
+/* END LOGIN INTERNAL */

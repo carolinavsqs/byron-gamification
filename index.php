@@ -16,16 +16,22 @@
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 		<meta charset='utf-8'>
 	</head>
 	<body>	
+		<!-- TELA INICIAL -->
+			<div class="screen_one" style="background-image: url('_img/backgrounds/5.jpg');">
+				<div class="container_info">
+					<div class="container_info_title">VOCÊ CHEGOU.</div>
+					<div class="container_info_description">Depois de horas e horas de árdua caminhada, com um último gole de água restante em seu cantil, após ter enfrentado inúmeras criaturas ferozes, você finalmente avistou o que pareceu ser um vilarejo. Você não sabe ao certo o que poderia encontrar ao seguir em frente, mas, com certeza, seria melhor do que os infortúnios que passara naquela floresta. Ou será que não? Bom, só há um jeito de descobrir.</div>
+					<div class="container_info_button"><div class="signal">></div> continuar a aventura. você não chegou até aqui para desistir agora!</div>
+					<div class="container_info_button"><div class="signal">></div> voltar para a floresta e tentar achar outro caminho</div>
+				</div>
+			</div>
+		<!-- END TELA INICIAL -->
 		<!-- CARROSSEL -->
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
-			<ol class="carousel-indicators">
-				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
 			<div class="carousel-inner">
                     <?php if(!isset($_SESSION['byron_gamification']['user'])): ?>
                         <!-- LOGIN BUTTON TELA PRINCIPAL -->
@@ -42,13 +48,23 @@
 
 
 					<!-- END LOGIN BUTTON TELA PRINCIPAL -->
-				<div class="carousel-item active" style="background-image: url('_img/backgrounds/1.jpg')">
+				<div class="carousel-item active" style="background-image: url('_img/backgrounds/1.jpg');">
+					<!-- PRIMEIRA TELA -->
+					<div class="container_info">
+						<div class="carousel_big_button">explore<br>as<br>guildas</div>
+					</div>
 				</div>
 				<div class="carousel-item" style="background-image: url('_img/backgrounds/2.jpg')">
-					
+					<!-- SEGUNDA TELA -->
+					<div class="container_info">
+						<div class="carousel_big_button">descubra mais sobre as classes</div>
+					</div>
 				</div>
 				<div class="carousel-item" style="background-image: url('_img/backgrounds/3.jpg')">
-					
+					<!-- TERCEIRA TELA -->
+					<div class="container_info">
+						<div class="carousel_big_button">conheça os desafios do reino</div>
+					</div>
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -63,19 +79,18 @@
 		<!-- END CARROSSEL -->
 		
 		<!-- MODAL LOGIN -->
-		 <div id="login" class="modal">
-			<div class="modal_content" style="max-width:600px">
-				<div class="header_login"><br>
-					<span onclick="document.getElementById('login').style.display='none'" class="login_button_internal login_button_internal_close" title="Fechar">&times;</span>
-					<img src="img_avatar4.png" style="width:30%" class="img_login">
-					<p class="header_login_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador. - Identifique-se!"</p>
+		 <div id="login" class="modal_login">
+			<div class="modal_login_content" style="max-width:600px">
+				<div class="modal_login_header"><br>
+					<span onclick="document.getElementById('login').style.display='none'" class="modal_login_button_internal modal_login_button_internal_close" title="Fechar">&times;</span>
+					<img src="img_avatar4.png" style="width:30%" class="modal_login_img">
+					<p class="modal_login_header_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador. - Identifique-se!"</p>
 				</div>
 	
-					<form class="form_login" action="_controller/login.php" method="POST">
-						<input class="form_login_input form_login_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
-						<input class="form_login_input" type="password" placeholder="Senha" name="psw" required>
-						<button class="login_button_internal login_button_internal_submit" type="submit">PASSAR PELOS PORTÕES</button>
-
+				<form class="modal_login_form" action="_controller/login.php" method="POST">
+					<input class="modal_login_form_input modal_login_form_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
+					<input class="modal_login_form_input" type="password" placeholder="Senha" name="psw" required>
+					<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">passar pelos portões</button>
 				</form>
 			</div>
 		  </div>
