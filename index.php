@@ -11,7 +11,10 @@
         <link rel="stylesheet" href="_css/styleIndex.css" type="text/css">
 		<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <!--FONT AWESOME -->
+		<!-- JQUERY -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="_js/smoothscroll.js"></script> 
+		<!--FONT AWESOME -->
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -25,13 +28,14 @@
 				<div class="container_info">
 					<div class="container_info_title">VOCÊ CHEGOU.</div>
 					<div class="container_info_description">Depois de horas e horas de árdua caminhada, com um último gole de água restante em seu cantil, após ter enfrentado inúmeras criaturas ferozes, você finalmente avistou o que pareceu ser um vilarejo. Você não sabe ao certo o que poderia encontrar ao seguir em frente, mas, com certeza, seria melhor do que os infortúnios que passara naquela floresta. Ou será que não? Bom, só há um jeito de descobrir.</div>
-					<div class="container_info_button"><div class="signal">></div> continuar a aventura. você não chegou até aqui para desistir agora!</div>
-					<div class="container_info_button"><div class="signal">></div> voltar para a floresta e tentar achar outro caminho</div>
+					<a id="info_text1" class="container_info_button smoothScroll" href="#adventure"><div id="info_signal1">></div> continuar a aventura. você não chegou até aqui para desistir agora!</a>
+					<a id="info_text2" class="container_info_button" href="#goback"><div id="info_signal2">></div> voltar para a floresta e tentar achar outro caminho</a>
 				</div>
 			</div>
 		<!-- END TELA INICIAL -->
 		<!-- CARROSSEL -->
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="10000">
+		<div id="adventure" class="carousel_position"></div>
+		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
 			<div class="carousel-inner">
                     <?php if(!isset($_SESSION['byron_gamification']['user'])): ?>
                         <!-- LOGIN BUTTON TELA PRINCIPAL -->
@@ -67,11 +71,11 @@
 					</div>
 				</div>
 			</div>
-			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev" style="top: 100vh; height: 100%; filter: brightness(70%);">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
-			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<a class="carousel-control-next" href="#carousel" role="button" data-slide="next" style="top: 100vh; height: 100%; filter: brightness(70%);">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
@@ -84,7 +88,7 @@
 				<div class="modal_login_header"><br>
 					<span onclick="document.getElementById('login').style.display='none'" class="modal_login_button_internal modal_login_button_internal_close" title="Fechar">&times;</span>
 					<img src="img_avatar4.png" style="width:30%" class="modal_login_img">
-					<p class="modal_login_header_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador. - Identifique-se!"</p>
+					<p class="modal_login_header_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador, no momento em que você se aproximou dos portões do vilarejo. - Identifique-se!"</p>
 				</div>
 	
 				<form class="modal_login_form" action="_controller/login.php" method="POST">

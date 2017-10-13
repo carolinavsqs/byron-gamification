@@ -1,5 +1,15 @@
 /* TELA INICIAL */
 
+::selection
+{
+  background: #5e5e56;
+}
+
+::-moz-selection
+{
+  background: #5e5e56;
+}
+
 .screen_one
 {
 	height: 100vh;
@@ -37,41 +47,46 @@
 	font-size: 20px;
 	text-align: center;
 	display: inline-block;
-	width: 60%;
+	width: 50%;
 	border: 1px dotted #fff;
 	padding: 20px 20px 20px 20px;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
-.container_info_button
+.container_info_button, .container_info_button a:link, .container_info_button a:visited, .container_info_button a:active
 {
 	background-color: transparent;
 	font-family: 'Inconsolata', monospace;
 	font-size: 16px;
 	text-transform: uppercase;
-	margin-right: 10px;
-	margin-left: 10px;
 	padding: 8px 16px 8px 16px;
 	text-align: center;
+	color: #fff;
+	display: block;
 }
 
-.container_info_button > .signal
+.container_info_button:hover, .container_info_button a:hover
+{
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+}
+
+#info_signal1, #info_signal2
 {
 	display: none;
 	color: #fff;
 }
 
-.container_info_button:hover
+#info_text1:hover > #info_signal1
 {
-	cursor: pointer;
+	display: initial;
 }
 
-.container_info_button:hover > .signal
+#info_text2:hover > #info_signal2
 {
-	display: block;
-	float: left;
-	margin-right: -10px;
+	display: initial;
 }
 
 /* END TELA INICIAL */
@@ -91,7 +106,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-	filter: brightness(20%);
+	filter: brightness(40%);
 	transition: filter .75s ease-in-out;
     -moz-transition: filter .75s ease-in-out;
     -webkit-transition: filter .75s ease-in-out;
@@ -123,6 +138,14 @@
 .carousel_big_button:hover
 {
 	cursor: pointer;
+}
+
+.carousel_position
+{
+	position: absolute;
+	margin-top: 100vh;
+	z-index: 1;
+	background-color: transparent;
 }
 
 /* END CAROUSEL */
@@ -255,6 +278,8 @@
 	font-family: 'Inconsolata', monospace;
 	padding-top: 20px;
 	font-style: bold;
+	margin-right: 5%;
+	margin-left: 5%;
 }
 
 .modal_login_img
@@ -297,11 +322,11 @@
 	display: block;
 	width: 100%;
 	color: #fff;
-	background-color: #b3982c;
+	background-color: #5e5e56;
 	padding: 8px 16px;
 	font-family: 'Inconsolata', monospace;
 	text-transform: uppercase;
-	border: 1px dotted #b3982c;
+	border: 1px dotted #5e5e56;
     transition: background-color .75s ease-in-out;
     -moz-transition: background-color .75s ease-in-out;
     -webkit-transition: background-color .75s ease-in-out;
@@ -309,9 +334,9 @@
 
 .modal_login_button_internal_submit:hover
 {
-	color: #b3982c;
+	color: #5e5e56;
 	background-color: #fff;
-	border: 1px dotted #b3982c;
+	border: 1px dotted #5e5e56;
     transition: background-color color .75s ease-in-out;
     -moz-transition: background-color color .75s ease-in-out;
     -webkit-transition: background-color color .75 ease-in-out;
