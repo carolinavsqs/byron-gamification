@@ -343,3 +343,33 @@
 }
 
 /* END LOGIN INTERNAL */
+
+/* MOBILE ADJUSTMENTS */
+
+@media only screen and (max-width:900px)
+{
+	.container_info_title
+	{
+		font-size: 35px;
+	}
+	
+	.container_info_description
+	{
+		font-size: 15px;
+		width: 70%;
+	}
+	
+	.container_info_button
+	{
+		font-size: 12px;
+	}
+	
+	.carousel_big_button
+	{
+		font-size: 30px;
+		width: 50%;
+		line-height: 30px;
+	}
+}
+
+/* END MOBILE ADJUSTMENTS */
