@@ -1,0 +1,87 @@
+/* NAVBAR */
+#navbar
+{
+	background-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	height: 15vh;
+	box-shadow: 1px 1px 3px 1px #969694;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#navbar_left
+{
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+@media only screen and (max-width:990px)
+{
+	#navbar
+	{
+		height: 100%;
+	}
+}
+/* END NAVBAR */
+
+/* CONTEÚDO */
+.container_title
+{
+	text-align: center;
+	color: #000;
+	font-weight: 600;
+	font-size: 16px;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.container_description
+{
+	text-align: justify;
+	color: #5e5e56;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	overflow-x: hidden;
+	width: 80%;
+	height: 65%;
+	padding-right: 3%;
+	margin-left: 6%;
+}
+
+.container_information
+{
+	height: 100vh;
+	width: 100%;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-attachment: fixed;
+}
+
+.container_information_text
+{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+	background-color: #fff;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-top: 9%;
+	width: 50%;
+	height: 100%;
+}
+
+@media only screen and (max-width:700px)
+{
+	.container_information_text
+	{
+		padding-top: 20%;
+	}
+}
+/* END CONTEÚDO */
