@@ -63,6 +63,19 @@
 	background-attachment: fixed;
 }
 
+.container_information_bg
+{  
+    height: 100vh;
+    width:  50%;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-attachment: fixed;
+}
+
 .container_information_text
 {
 	text-align: center;
