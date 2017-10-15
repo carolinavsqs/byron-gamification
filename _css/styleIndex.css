@@ -22,7 +22,7 @@
 	filter: brightness(100%);
 }
 
-.container_info
+.container_info, .container_info a:link, .container_info a:visited, .container_info a:hover, .container_info a:active
 {
 	position: relative;
 	top: 50%;
@@ -30,6 +30,7 @@
 	text-align: center;
 	color: #fff;
 	text-shadow: 1px 1px #000;
+    text-decoration:none;
 }
 
 .container_info_title
@@ -135,6 +136,8 @@
 	border: solid #fff 2px;
 }
 
+
+
 .carousel_big_button:hover
 {
 	cursor: pointer;
@@ -193,6 +196,7 @@
 .container_login_button_external_text a:hover
 {
 	color: #fff;
+    text-decoration:none;
 }
 
 /* END LOGIN EXTERNAL */
@@ -343,7 +347,23 @@
 }
 
 /* END LOGIN INTERNAL */
+a:link
+{
+    color:#FFFFFF;
+    text-decoration: none;
+}
 
+a:visited
+{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+
+a:hover 
+{
+    text-decoration: none;
+    color: #fff;
+}
 /* MOBILE ADJUSTMENTS */
 
 @media only screen and (max-width:900px)

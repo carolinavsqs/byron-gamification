@@ -55,19 +55,36 @@
 				<div class="carousel-item active" style="background-image: url('_img/backgrounds/1.jpg');">
 					<!-- PRIMEIRA TELA -->
 					<div class="container_info">
-						<div class="carousel_big_button">explore<br>as<br>guildas</div>
+						<div class="carousel_big_button" href="pageGuild.html">
+                            <li>
+                                <a class="carousel_info" href="pageGuild.html">
+                                explore<br>as<br>guildas
+                                </a>
+                            </li>
+                        </div>
 					</div>
 				</div>
 				<div class="carousel-item" style="background-image: url('_img/backgrounds/2.jpg')">
 					<!-- SEGUNDA TELA -->
 					<div class="container_info">
-						<div class="carousel_big_button">descubra mais sobre as classes</div>
+						<div class="carousel_big_button" href="pageClass.html">
+                            <li>
+                                <a class="carousel_info" href="pageClass.html">
+                                   descubra mais sobre as classes 
+                                </a>
+                            </li>
+                        </div>
 					</div>
 				</div>
 				<div class="carousel-item" style="background-image: url('_img/backgrounds/3.jpg')">
 					<!-- TERCEIRA TELA -->
 					<div class="container_info">
-						<div class="carousel_big_button">conheça os desafios do reino</div>
+						<div class="carousel_big_button">
+                            <li>
+                                <a class="carousel_info" href="pagePoints.html">
+                                    conheça os desafios do reino
+                                </a>
+                            </li></div>
 					</div>
 				</div>
 			</div>

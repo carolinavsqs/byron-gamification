@@ -28,40 +28,57 @@
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Guildas
 						<span class="sr-only">(current)</span><span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						  <li><a class="nav-link smoothScroll" href="#guild1">guilda 1</a></li>
-						  <li><a class="nav-link smoothScroll" href="#guild2">guilda 2</a></li>
-						  <li><a class="nav-link smoothScroll" href="#guild3">guilda 3</a></li>
-						  <li><a class="nav-link smoothScroll" href="#guild4">guilda 4</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild1">guilda 1</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild2">guilda 2</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild3">guilda 3</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild4">guilda 4</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item active dropdown">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Classes
 						<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						  <li><a class="nav-link smoothScroll" href="#class1">alquimista</a></li>
-						  <li><a class="nav-link smoothScroll" href="#class2">arqueiro</a></li>
-						  <li><a class="nav-link smoothScroll" href="#class3">bardo</a></li>
-						  <li><a class="nav-link smoothScroll" href="#class4">guerreiro</a></li>
-						  <li><a class="nav-link smoothScroll" href="#class5">ladino</a></li>
-						  <li><a class="nav-link smoothScroll" href="#class6">mago</a></li>
-						  <li><a class="nav-link smoothScroll" href="#class7">paladino</a></li>
+						  <li><a class="nav-link smoothScroll" href="#alquimista">alquimista</a></li>
+						  <li><a class="nav-link smoothScroll" href="#arqueiro">arqueiro</a></li>
+						  <li><a class="nav-link smoothScroll" href="#bardo">bardo</a></li>
+						  <li><a class="nav-link smoothScroll" href="#guerreiro">guerreiro</a></li>
+						  <li><a class="nav-link smoothScroll" href="#ladino">ladino</a></li>
+						  <li><a class="nav-link smoothScroll" href="#mago">mago</a></li>
+						  <li><a class="nav-link smoothScroll" href="#paladino">paladino</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item">
-						<a class="nav-link" href="#">Pontuação</a>
+						<a class="nav-link" href="pagePoints.html">Pontuação</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="nav-item">
+					<li onclick="document.getElementById('login').style.display='block'" class="nav-item">
 						<a class="nav-link" href="#">Identifique-se!</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 		<!-- END NAVBAR -->
+        <!-- MODAL LOGIN -->
+        <div id="login" class="modal_login">
+			<div class="modal_login_content" style="max-width:600px">
+				<div class="modal_login_header"><br>
+					<span onclick="document.getElementById('login').style.display='none'" class="modal_login_button_internal modal_login_button_internal_close" title="Fechar">&times;</span>
+					<img src="img_avatar4.png" style="width:30%" class="modal_login_img">
+					<p class="modal_login_header_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador, no momento em que você se aproximou dos portões do vilarejo. - Identifique-se!"</p>
+				</div>
+	
+				<form class="modal_login_form" action="_controller/login.php" method="POST">
+					<input class="modal_login_form_input modal_login_form_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
+					<input class="modal_login_form_input" type="password" placeholder="Senha" name="psw" required>
+					<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">passar pelos portões</button>
+				</form>
+			</div>
+		  </div>
+        <!-- END MODAL LOGIN -->
 		<!-- CONTEÚDO -->
 		<!-- CLASSE 1 -->
-		<div id="class1" class="container_information" >
+		<div id="alquimista" class="container_information" >
 			<div class="container_information_text" style="float:left;">
 				<div class="container_title">Alquimista</div>
 				<div class="container_description" ss-container>
@@ -74,7 +91,7 @@
             </div>
 		</div>
 		<!-- CLASSE 2 -->
-		<div id="class2" class="container_information" style="background-image: url('_img/backgrounds/ranger3.jpg');">
+		<div id="arqueiro" class="container_information" style="background-image: url('_img/backgrounds/ranger3.jpg');">
 			<div class="container_information_text" style="float: right;">
 				<div class="container_title">Arqueiro</div>
 				<div class="container_description" ss-container>
@@ -85,7 +102,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 3 -->
-		<div id="class3" class="container_information"style="background-image: url('_img/backgrounds/bard.jpg');">
+		<div id="bardo" class="container_information"style="background-image: url('_img/backgrounds/bard.jpg');">
 			<div class="container_information_text">
 				<div class="container_title">Bardo</div>
 				<div class="container_description" ss-container>
@@ -96,7 +113,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 4 -->
-		<div id="class4" class="container_information" style="background-image: url('_img/backgrounds/warrior5.jpg');">
+		<div id="guerreiro" class="container_information" style="background-image: url('_img/backgrounds/warrior5.jpg');">
 			<div class="container_information_text" style="float: right;">
 				<div class="container_title">Guerreiro</div>
 				<div class="container_description" ss-container>
@@ -107,7 +124,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 5 -->
-		<div id="class5" class="container_information"style="background-image: url('_img/backgrounds/ladino.jpg');">
+		<div id="ladino" class="container_information"style="background-image: url('_img/backgrounds/ladino.jpg');">
 			<div class="container_information_text">
 				<div class="container_title">Ladino</div>
 				<div class="container_description" ss-container>
@@ -118,7 +135,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 6 -->
-		<div id="6" class="container_information" style="background-image: url('_img/backgrounds/mage.jpg');">
+		<div id="mago" class="container_information" style="background-image: url('_img/backgrounds/mage.jpg');">
 			<div class="container_information_text" style="float: right;">
 				<div class="container_title">Mago</div>
 				<div class="container_description" ss-container>
@@ -129,7 +146,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 7 -->
-		<div id="class7" class="container_information"style="background-image: url('_img/backgrounds/paladin.jpg');">
+		<div id="paladino" class="container_information"style="background-image: url('_img/backgrounds/paladin.jpg');">
 			<div class="container_information_text">
 				<div class="container_title">Paladino</div>
 				<div class="container_description" ss-container>
