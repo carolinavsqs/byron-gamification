@@ -1,5 +1,6 @@
 <?php
     require_once 'mysql_connect.php';
+    include "log.php";
     
 
     if (!isset($_POST['usrname']) or !isset($_POST['nome']) or !isset($_POST['class']) or !isset($_POST['data'])){
@@ -36,5 +37,9 @@
     else
     {
         echo "<script>window.location.href='../index.php'</script>";
+        $message = "Novo usuario cadastrado";
+        $type = "add";
+        $user = $_SESSION['byron_gamification']['user'];
+        saveLog($message, $type, $user);
     }
 ?>

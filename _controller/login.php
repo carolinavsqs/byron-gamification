@@ -1,5 +1,5 @@
 <?php
-
+include "log.php";
 require_once 'mysql_connect.php';
 
 if (!empty($_POST['usrname']) or !empty($_POST['psw'])){
@@ -24,7 +24,7 @@ $queryResult = mysqli_query ($conn, $queryText);
 
 if ((!$queryResult) or ((mysqli_num_rows ($queryResult)) < 1))
 {
-
+    
     echo "<script> 
         alert('Usuario ou Senha incorretos!');
         window.location.href='../index.php';
@@ -41,9 +41,16 @@ else
     $_SESSION['byron_gamification']['id_guild'] = $userData['id_guild'] ;
     $_SESSION['byron_gamification']['picture'] = $userData['picture'] ;
 
+    $message = "Logou no site";
+    $type = "add";
+    $user = $_SESSION['byron_gamification']['user'];
+    saveLog($message, $type, $user);
+    
+    
     header('Location: ../_view/home.php');
     session_encode();
 }
+
 
 ?>
 	

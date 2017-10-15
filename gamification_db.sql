@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 10-Out-2017 às 23:48
+-- Generation Time: 16-Out-2017 às 01:57
 -- Versão do servidor: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -60,11 +60,24 @@ INSERT INTO `guilda` (`id`, `name`, `valuesGuilda`, `description`, `crest`) VALU
 --
 
 CREATE TABLE `log` (
-  `id` int(11) NOT NULL,
-  `id_user` varchar(20) DEFAULT NULL,
-  `description` varchar(100) DEFAULT NULL,
-  `type` varchar(20) NOT NULL
+  `id` int(10) UNSIGNED NOT NULL,
+  `hora` datetime NOT NULL,
+  `ip` varchar(15) NOT NULL,
+  `message` text CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+  `type` enum('add','edit','remove','xp') DEFAULT NULL,
+  `user` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `log`
+--
+
+INSERT INTO `log` (`id`, `hora`, `ip`, `message`, `type`, `user`) VALUES
+(1, '2017-10-15 19:46:00', '200.99.198.178', 'Teste', 'add', 'gabbs'),
+(2, '0000-00-00 00:00:00', '127.99.196.178', 'Teste dnv', 'edit', 'gabbs'),
+(5, '2017-10-15 21:06:00', '200', 'Logou no site', 'add', 'gabbs'),
+(6, '2017-10-15 21:06:00', '200', 'Logou no site', 'add', 'gabbs'),
+(7, '2017-10-16 01:37:02', '::1', 'Logou no site', 'add', 'gabbs');
 
 -- --------------------------------------------------------
 
@@ -158,7 +171,7 @@ ALTER TABLE `guilda`
 --
 ALTER TABLE `log`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
+  ADD KEY `user` (`user`);
 
 --
 -- Indexes for table `patchnote`
@@ -189,6 +202,15 @@ ALTER TABLE `usuario_conquista`
   ADD KEY `id_conquist` (`id_conquist`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `log`
+--
+ALTER TABLE `log`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- Constraints for dumped tables
 --
 
@@ -196,7 +218,7 @@ ALTER TABLE `usuario_conquista`
 -- Limitadores para a tabela `log`
 --
 ALTER TABLE `log`
-  ADD CONSTRAINT `log_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuario` (`user`);
+  ADD CONSTRAINT `log_ibfk_1` FOREIGN KEY (`user`) REFERENCES `usuario` (`user`);
 
 --
 -- Limitadores para a tabela `patchnote`

@@ -17,6 +17,11 @@ if (empty($_POST['new_exp']))
     $new_exp       = mysql_real_escape_string ($new_exp);
     
     $exp_total     = $new_exp."+".$linha['exp'];
+    
+    $message = "XP Alterada em + .$new_exp.";
+    $type = "xp";
+    $user = $_SESSION['byron_gamification']['user'];
+    saveLog($message, $type, $user);
 }
 
     $query_name = "UPDATE `usuario` SET `exp` = '".$new_total."',  WHERE  user = '".$my_user."'";
