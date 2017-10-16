@@ -2,6 +2,7 @@
 
 session_start();
 require_once 'mysql_connect.php';
+include "log.php";
 
 if (!$_SESSION["login_status"])
 {

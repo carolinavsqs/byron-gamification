@@ -1,6 +1,7 @@
 <?php
 
 require_once 'mysql_connect.php';
+include "log.php";
 
 $sessionID = //Informação do front end
 
