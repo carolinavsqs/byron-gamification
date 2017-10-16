@@ -136,13 +136,6 @@
 	border: solid #fff 2px;
 }
 
-
-
-.carousel_big_button:hover
-{
-	cursor: pointer;
-}
-
 .carousel_position
 {
 	position: absolute;
