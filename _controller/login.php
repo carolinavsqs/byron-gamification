@@ -41,10 +41,6 @@ else
     $_SESSION['byron_gamification']['id_guild'] = $userData['id_guild'] ;
     $_SESSION['byron_gamification']['picture'] = $userData['picture'] ;
 
-    $message = "Logou no site";
-    $type = "add";
-    $user = $_SESSION['byron_gamification']['user'];
-    saveLog($message, $type, $user);
     
     
     header('Location: ../_view/home.php');
