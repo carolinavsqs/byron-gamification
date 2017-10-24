@@ -23,13 +23,14 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `conquista`
+-- Estrutura da tabela `conquista` ou Insignia
 --
 
 CREATE TABLE `conquista` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `description` varchar(100) DEFAULT NULL
+  `description` varchar(100) DEFAULT NULL,
+  `image` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -130,6 +131,7 @@ CREATE TABLE `usuario` (
   `attributes` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `expertise` varchar(255) NOT NULL
+  `genero` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
