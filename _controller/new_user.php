@@ -27,7 +27,7 @@
 
     $queryText  = "INSERT INTO `usuario`(`user`, `name`, `class`,`dateBirthday`,`password`) VALUES
         ('".$username."','".$nome."','".$class."', '".$data."','".$password."')";
-
+    
     $queryResult = mysqli_query ($conn, $queryText);
 
     if (!$queryResult)
