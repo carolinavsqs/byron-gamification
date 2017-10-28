@@ -103,13 +103,12 @@
 .left_links_item, .left_links_item a:link, .left_links_item a:active, .left_links_item a:visited
 {   
     text-decoration:none;
-    
     text-transform: uppercase;
-    padding: 8% 8% 8% 8%;
+    padding: 9% 9% 9% 9%;
 	font-family:'Open Sans', sans-serif;
 	font-size: 16px;
 	width: 100%;
-	text-align: right;
+	text-align: center;
 	color: #FFFFFF;
 }
 
@@ -131,12 +130,14 @@
 	background-color: #fff;
 	width: 75%;
 	height: 92%;
-    padding: 5% 5% 5% 5%;
+    padding: 2% 2% 2% 2%;
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
     font-family: 'VT323', monospace;
     color: #595959;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .container_profile_right_top
@@ -149,9 +150,67 @@
     position:absolute;
     top:0px;
     left:0px;   
-    border-bottom: 1px dotted #000;
     display:flex;
     flex-wrap: nowrap;
+}
+
+.profile_top_title
+{
+	width: inherit;
+	font-size: 35px;
+}
+
+.profile_top_subtitle
+{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: gray;
+	border-bottom: 1px dotted #232324;
+	width: inherit;
+	margin-top: -10px;
+	padding-bottom: 10px;
+}
+
+.profile_top_text
+{
+	font-size: 17px;
+	text-transform: uppercase;
+}
+
+.profile_top_text:hover
+{
+	color: #232324;
+}
+
+.profile_about_title
+{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: gray;
+}
+
+.profile_about_box
+{
+	border: 1px #232324 dotted;
+	height: 130px;
+	width: 100%;
+	position:absolute;
+	bottom:0px;
+}
+
+.profile_about
+{
+	text-transform: lowercase;
+	font-size:20px;
+	text-align: justify;
+	padding: 5% 5% 5% 5%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .container_profile_right_top_left
@@ -182,7 +241,7 @@
     background-color: transparent;
     width:90%;
     height:55%;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
     margin-left: 5%;
     position:absolute;
     bottom:0px;
@@ -215,7 +274,7 @@
     width:45%;
     height:45%;
     margin-top:12%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .profile_img_bg_box
@@ -283,9 +342,9 @@
 }
 
 
-.crest_container {
-  text-align: center;
+.crest_container
+{
+	text-align: center;
     font-size: 20px;
-  padding: 6px 15px;
+	padding: 6px 15px;
 }
-.
