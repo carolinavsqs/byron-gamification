@@ -3,7 +3,7 @@
     include "log.php";
     
 
-    if (!isset($_POST['usrname']) or !isset($_POST['nome']) or !isset($_POST['class']) or !isset($_POST['data']) or !isset($_POST['Nick']) or !isset($_POST['Guild'])){
+    if (!isset($_POST['usrname']) or !isset($_POST['nome']) or !isset($_POST['class']) or !isset($_POST['data']) or !isset($_POST['Nick']) or !isset($_POST['guild'])){
         $input_data = $_POST['data'];
         die ();
     }   
@@ -16,8 +16,8 @@
     $class      = stripslashes($_POST['class']);
     $password1  = stripslashes($trimmed);
     $data       = stripslashes($_POST['data']);
-    $genero       = stripslashes($_POST['Nick']);
-    $guild       = stripslashes($_POST['guild']);
+    $genero     = stripslashes($_POST['Nick']);
+    $guild      = stripslashes($_POST['guild']);
     $username   = mysqli_real_escape_string($conn, $username);
     $nome       = mysqli_real_escape_string($conn, $nome);
     $class      = mysqli_real_escape_string($conn, $class);
