@@ -74,7 +74,7 @@ CREATE TABLE `log` (
 --
 
 INSERT INTO `log` (`id`, `hora`, `ip`, `message`, `type`, `user`) VALUES
-(1, '2017-10-15 19:46:00', '200.99.198.178', 'Testou o log', 'add', 'gabbs'),
+(1, '2017-10-15 19:46:00', '200.99.198.178', 'Testou o log', 'add', 'gabbs');
 
 -- --------------------------------------------------------
 
