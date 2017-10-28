@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-CREATE DATABASE gamification_db IF NOT EXISTS;
+CREATE DATABASE IF NOT EXISTS gamification_db;
 --
 -- Estrutura da tabela `conquista` ou Insignia
 --
@@ -74,11 +74,7 @@ CREATE TABLE `log` (
 --
 
 INSERT INTO `log` (`id`, `hora`, `ip`, `message`, `type`, `user`) VALUES
-(1, '2017-10-15 19:46:00', '200.99.198.178', 'Teste', 'add', 'gabbs'),
-(2, '0000-00-00 00:00:00', '127.99.196.178', 'Teste dnv', 'edit', 'gabbs'),
-(5, '2017-10-15 21:06:00', '200', 'Logou no site', 'add', 'gabbs'),
-(6, '2017-10-15 21:06:00', '200', 'Logou no site', 'add', 'gabbs'),
-(7, '2017-10-16 01:37:02', '::1', 'Logou no site', 'add', 'gabbs');
+(1, '2017-10-15 19:46:00', '200.99.198.178', 'Testou o log', 'add', 'gabbs'),
 
 -- --------------------------------------------------------
 
