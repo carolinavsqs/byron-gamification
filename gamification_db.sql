@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
+CREATE DATABASE gamification_db IF NOT EXISTS;
 --
 -- Estrutura da tabela `conquista` ou Insignia
 --
@@ -130,8 +130,8 @@ CREATE TABLE `usuario` (
   `about` varchar(255) NOT NULL,
   `attributes` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
-  `expertise` varchar(255) NOT NULL
-  `genero` varchar(5) NOT NULL
+  `expertise` varchar(255) NOT NULL,
+  `genero` enum('M', 'F') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
