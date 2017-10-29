@@ -1,8 +1,14 @@
+<?php
+	require_once ("../_controller/check_login.php");
+	require_once ("../_controller/mysql_connect.php");
+	require_once ("../_controller/getProfileData.php");
+	require_once ("../_controller/helper.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<!--CSS-->
-		<link rel="stylesheet" href="_css/stylePageProfile.css" type="text/css">
+		<link rel="stylesheet" href="../_css/stylePageProfile.css" type="text/css">
 		<!--BOOTSTRAP-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<!-- FONTS -->
@@ -25,7 +31,7 @@
 							<a class="container_profile_top_button_left">atividade</a>
 							<a class="container_profile_top_button_left">distribuir xp</a>
 							<a class="container_profile_top_button_left">administrador</a>
-                            <a class="container_profile_top_button_right">olá, hsmcarol_4!</a>
+                            <a class="container_profile_top_button_right">olá, <?php echo $userData['user'];?>!</a>
 				</div>
 				<div class="container_profile_left">
 					<div class="profile_img_bg_box">
@@ -43,13 +49,13 @@
                     <div class="container_profile_right_top">
 					
                         <div class="container_profile_right_top_left">
-                            <div class="profile_top_title">cleison_456</div>    
-							<div class="profile_top_subtitle">o matador de dragões</div>							
-							<div class="profile_top_text" style="padding-top: 2%;">> NOME: REGIS CLEISON</div>
-							<div class="profile_top_text">> GÊNERO: MASCULINO</div>
-                            <div class="profile_top_text">> MBTI: ENTP</div>
-                            <div class="profile_top_text">> ALINHAMENTO: CAÓTICO NEUTRO</div>
-                            <div class="profile_top_text">> DATA DE NASCIMENTO: 13/02/1996</div>   
+                            <div class="profile_top_title"><?php echo $userData['user'];?></div>    
+							<div class="profile_top_subtitle"><?php echo $userData['title']; ?></div>							
+							<div class="profile_top_text" style="padding-top: 2%;">> NOME: <?php echo $userData['name']; ?></div>
+							<div class="profile_top_text">> GÊNERO: <?php echo convert_genre_db_to_gui($userData['genero']); ?></div>
+                            <div class="profile_top_text">> MBTI: <?php echo $userData['mbti']; ?></div>
+                            <div class="profile_top_text">> ALINHAMENTO: <?php echo $userData['allignment']; ?></div>
+                            <div class="profile_top_text">> DATA DE NASCIMENTO: <?php echo convert_date_db_to_gui($userData['dateBirthday']); ?></div>   
                         </div>
 						
                         <div class="container_profile_right_top_right">
@@ -71,11 +77,11 @@
 						<div class="container_profile_right_bottom_left">
 							<p class="profile_about_title" style="margin-top: 28%;">sobre mim</p>
 							<div class="profile_about_box">
-								<p class="profile_about">Amante de pizza fria, da cor laranja, de caminhar na praia e do som do ventilador girando.</p>    
+								<p class="profile_about"><?php echo $userData['about'] ?></p>    
 							</div>
 						</div>
 						<div class="container_profile_right_bottom_right">
-							<div style="text-align: right; font-size: 25px; margin-top: 4%;">xp total: 164218</div>
+							<div style="text-align: right; font-size: 25px; margin-top: 4%;">xp total: <?php echo $userData['exp'] ?></div>
 							<img src="_img/backgrounds/atributos.jpg" style="height:80%;width:auto; margin-top:10%; margin-left:20%; position:absolute; right: 0px; bottom:0px;">
 						</div>
                     </div>

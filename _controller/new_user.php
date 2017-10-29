@@ -40,7 +40,8 @@
     }
     else
     {
-        echo "<script>window.location.href='../index.php'</script>";
+        echo "<script>alert('Membro adicionado!')</script>";
+        echo "<script>window.location.href='../_view/registerForm.php'</script>";
         $message = "Novo usuario cadastrado";
         $type = "add";
         $user = $_SESSION['byron_gamification']['user'];

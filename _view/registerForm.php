@@ -1,21 +1,24 @@
+<?php
+    require_once ("../_controller/check_login.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<!-- CSS -->
-		<link rel="stylesheet" href="_css/styleRegisterForm.css" type="text/css">
-		<link rel="stylesheet" href="_css/simple-scrollbar.css" type="text/css"></script>
+		<link rel="stylesheet" href="../_css/styleRegisterForm.css" type="text/css">
+		<link rel="stylesheet" href="../_css/simple-scrollbar.css" type="text/css"></script>
 		<!-- BOOTSTRAP -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<!-- JQUERY -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="_js/simple-scrollbar.min.js"></script> 
+		<script type="text/javascript" src="../_js/simple-scrollbar.min.js"></script> 
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 		<meta charset='utf-8'>
 	</head>
 	<body>
-	<div class="register_form_bg" style="background-image: url('_img/backgrounds/10.jpg');">
+	<div class="register_form_bg" style="background-image: url('../_img/backgrounds/10.jpg');">
 		<div class="register_form_container">
 			<div class="register_form_content" ss-container>
 			<!-- ideia: carrossel que personaliza os próximos quadros de acordo com a resposta, imagem de fundo, fazer as setas, recarregar página -->
@@ -28,7 +31,7 @@
 					<div class="register_form_text">> Como ele(a) será conhecido(a) em nosso reino?</div>
 					<input class="register_form_input" type="text" name="usrname" placeholder="Nickname">
 					<div class="register_form_text">> Qual sua data de nascimento?</div>
-					<input class="register_form_input" type="text" name="data" placeholder="DD/MM/AAAA">
+					<input class="register_form_input" type="date" name="data" placeholder="DD/MM/AAAA">
 					<div class="register_form_text">> Qual a classe do(a) nosso(a) aventureiro(a)?</div>
 					<input class="register_form_input" type="text" name="class" placeholder="Ex: Bardo">
 					<div class="register_form_text">> E para qual guilda ele(a) foi selecionado(a)?</div>
