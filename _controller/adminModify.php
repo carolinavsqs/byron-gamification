@@ -4,7 +4,7 @@ require_once 'mysql_connect.php';
 include "log.php";
 
 
-$sessionID = //Informação do front end
+$sessionID = $_POST['Usuario'];
 
 $query_TEXT = "SELECT * FROM `usuario` WHERE '".$sessionID."' = `user`";
 $query_result = mysqli_query($conn, $query_TEXT);
