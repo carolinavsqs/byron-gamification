@@ -99,8 +99,7 @@ CREATE TABLE `trofeu` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `description` varchar(100) DEFAULT NULL,
-  `image` varchar(256) NOT NULL,
-  `id_user` varchar(15) DEFAULT NULL
+  `image` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -182,8 +181,7 @@ ALTER TABLE `patchnote`
 -- Indexes for table `trofeu`
 --
 ALTER TABLE `trofeu`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_user` (`id_user`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `usuario`
@@ -223,12 +221,6 @@ ALTER TABLE `log`
 --
 ALTER TABLE `patchnote`
   ADD CONSTRAINT `patchnote_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuario` (`user`);
-
---
--- Limitadores para a tabela `trofeu`
---
-ALTER TABLE `trofeu`
-  ADD CONSTRAINT `trofeu_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuario` (`user`);
 
 --
 -- Limitadores para a tabela `usuario`
