@@ -31,7 +31,7 @@
 					<div class="register_form_text">> Como ele(a) será conhecido(a) em nosso reino?</div>
 					<input class="register_form_input" type="text" name="usrname" placeholder="Nickname">
 					<div class="register_form_text">> Qual sua data de nascimento?</div>
-					<input class="register_form_input" type="date" name="data" placeholder="DD/MM/AAAA">
+					<input class="register_form_input" type="date" name="data" placeholder="AAAA/MM/DD">
 					<div class="register_form_text">> Qual a classe do(a) nosso(a) aventureiro(a)?</div>
 					<input class="register_form_input" type="text" name="class" placeholder="Ex: Bardo">
 					<div class="register_form_text">> E para qual guilda ele(a) foi selecionado(a)?</div>
