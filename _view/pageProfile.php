@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="../_css/stylePageProfile.css" type="text/css">
 		<!--BOOTSTRAP-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -58,17 +59,24 @@
                             <div class="profile_top_text">> DATA DE NASCIMENTO: <?php echo convert_date_db_to_gui($userData['dateBirthday']); ?></div>   
                         </div>
 						
-                        <div class="container_profile_right_top_right">
-                            <div class="container_profile_crest">
-                                <img src="_img/backgrounds/mage-icon.png" style="width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;">
-                                <div class="crest_container">
-                                <p class="profile_about_title">CLASSE</p>
-                                </div>
+                        <div class="container_profile_right_top_right" style="flex-direction:column">
+                            <div onclick="document.getElementById('edit').style.display='block'" class="container_profile_edit" style="width: 100%;height: 15px;">
+                                <span style="float:right">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                </span>
                             </div>
-                            <div class="container_profile_crest">
-                                <img src="_img/backgrounds/brasao.png" style="width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;">
-                                <div class="crest_container">
-                                <p class="profile_about_title">GUILDA</p>
+                            <div style="display: flex; justify-content: space-between">
+                                <div class="container_profile_crest">
+                                <img src="../_img/backgrounds/mage-icon.png" style="width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;">
+                                    <div class="crest_container">
+                                    <p class="profile_about_title">CLASSE</p>
+                                    </div>
+                                </div>
+                                <div class="container_profile_crest">
+                                <img src="../_img/backgrounds/brasao.png" style="width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;">
+                                    <div class="crest_container">
+                                        <p class="profile_about_title">GUILDA</p>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -89,6 +97,26 @@
             </div>
         </div>
 		<!-- END PERFIL -->
+        <!--MODAL EDIT PERFIL-->
+            <div id="edit" class="modal_login">
+			<div class="modal_login_content" style="max-width:600px">
+				<div class="modal_login_header"><br>
+					<span onclick="document.getElementById('edit').style.display='none'" class="modal_login_button_internal modal_login_button_internal_close" title="Fechar">&times;</span>
+                    <i class="modal_header_text">Deixe em branco os campos que você não quer alterar.</i>
+				</div>
+	
+				<form class="modal_login_form" action="../_controller/usuarioAltera.php" method="POST">
+					<input class="modal_login_form_input" type="password" placeholder="Senha" name="new_pasw">
+                    <input class="modal_login_form_input" type="password" placeholder="Confirmar nova senha" name="new_pasw2">
+                    <input class="modal_login_form_input" type="text" placeholder="Data de Nascimento" name="new_dateBirthday">
+                    <input class="modal_login_form_input" type="text" placeholder="MBTI" name="new_mbti">
+                    <input class="modal_login_form_input" type="text" placeholder="Alinhamento" name="new_allignment">
+                    <input class="modal_login_form_input" type="text" placeholder="Sobre mim" name="new_about">
+					<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">Alterar Perfil</button>
+				</form>
+			</div>
+		  </div>
+        <!--END MODAL EDIT PERFIL-->
 		<!-- JAVASCRIPT -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
