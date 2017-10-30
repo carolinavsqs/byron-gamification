@@ -57,7 +57,7 @@
 					<div class="container_info">
 						<div class="carousel_big_button">
                             <li>
-                                <a class="carousel_info" href="pageGuild.html" target="_blank">
+                                <a class="carousel_info" href="./_view/pageGuild.php" target="_blank">
                                 explore<br>as<br>guildas
                                 </a>
                             </li>
@@ -69,7 +69,7 @@
 					<div class="container_info">
 						<div class="carousel_big_button">
                             <li>
-                                <a class="carousel_info" href="pageClass.html" target="_blank">
+                                <a class="carousel_info" href="./_view/pageClass.php" target="_blank">
                                    descubra mais sobre as classes 
                                 </a>
                             </li>
@@ -81,7 +81,7 @@
 					<div class="container_info">
 						<div class="carousel_big_button">
                             <li>
-                                <a class="carousel_info" href="pagePoints.html" target="_blank">
+                                <a class="carousel_info" href="./_view/pagePoints.php" target="_blank">
                                     conheça os desafios do reino
                                 </a>
                             </li></div>

@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<!--CSS-->
-		<link rel="stylesheet" href="_css/stylePageClass.css" type="text/css">
-		<link rel="stylesheet" href="_css/simple-scrollbar.css" type="text/css"></script>
+		<link rel="stylesheet" href="../_css/stylePageClass.css" type="text/css">
+		<link rel="stylesheet" href="../_css/simple-scrollbar.css" type="text/css"></script>
 		<!--BOOTSTRAP-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<!-- JQUERY -->
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="_js/smoothscroll.js"></script> 
-		<script type="text/javascript" src="_js/simple-scrollbar.min.js"></script> 
+		<script type="text/javascript" src="../_js/smoothscroll.js"></script> 
+		<script type="text/javascript" src="../_js/simple-scrollbar.min.js"></script> 
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -28,11 +28,11 @@
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Guildas
 						<span class="sr-only">(current)</span><span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild1">guilda 1</a></li>
-						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild2">guilda 2</a></li>
-						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild3">guilda 3</a></li>
-						  <li><a class="nav-link smoothScroll" href="pageGuild.html#guild4">guilda 4</a></li>
-						  <li><a class="nav-link" href="pageGuild.html">ver todas</a></li>
+						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild1">guilda 1</a></li>
+						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild2">guilda 2</a></li>
+						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild3">guilda 3</a></li>
+						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild4">guilda 4</a></li>
+						  <li><a class="nav-link" href="./pageGuild.php">ver todas</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item active dropdown">
@@ -46,11 +46,11 @@
 						  <li><a class="nav-link smoothScroll" href="#ladino">ladino</a></li>
 						  <li><a class="nav-link smoothScroll" href="#mago">mago</a></li>
 						  <li><a class="nav-link smoothScroll" href="#paladino">paladino</a></li>
-						  <li><a class="nav-link" href="pageClass.html">ver todas</a></li>
+						  <li><a class="nav-link" href="./pageClass.php">ver todas</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item">
-						<a class="nav-link" href="pagePoints.html">Pontuação</a>
+						<a class="nav-link" href="./pagePoints.php">Pontuação</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -70,7 +70,7 @@
 					<p class="modal_login_header_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador, no momento em que você se aproximou dos portões do vilarejo. - Identifique-se!"</p>
 				</div>
 	
-				<form class="modal_login_form" action="_controller/login.php" method="POST">
+				<form class="modal_login_form" action="../_controller/login.php" method="POST">
 					<input class="modal_login_form_input modal_login_form_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
 					<input class="modal_login_form_input" type="password" placeholder="Senha" name="psw" required>
 					<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">passar pelos portões</button>
@@ -89,11 +89,11 @@
 					<p>In pellentesque ut odio ullamcorper mollis. Vivamus a ipsum at urna aliquam efficitur bibendum in dui. Proin quis odio tincidunt, sagittis sem placerat, fringilla diam. Nullam quis nisl facilisis, mattis arcu vel, elementum lacus. Curabitur id tincidunt orci, eget egestas orci. Sed id erat finibus, hendrerit nibh id, porta eros. In venenatis magna purus, sagittis posuere sem placerat at.</p>
 				</div>
 			</div>
-            <div class="container_information_bg" style="float:right; background-image:url('_img/backgrounds/alchemist.png');">
+            <div class="container_information_bg" style="float:right; background-image:url('../_img/backgrounds/alchemist.png');">
             </div>
 		</div>
 		<!-- CLASSE 2 -->
-		<div id="arqueiro" class="container_information" style="background-image: url('_img/backgrounds/ranger3.jpg');">
+		<div id="arqueiro" class="container_information" style="background-image: url('../_img/backgrounds/ranger3.jpg');">
 			<div class="container_information_text" style="float: right;">
 				<div class="container_title">Arqueiro</div>
 				<div class="container_description" ss-container>
@@ -104,7 +104,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 3 -->
-		<div id="bardo" class="container_information"style="background-image: url('_img/backgrounds/bard.jpg');">
+		<div id="bardo" class="container_information"style="background-image: url('../_img/backgrounds/bard.jpg');">
 			<div class="container_information_text">
 				<div class="container_title">Bardo</div>
 				<div class="container_description" ss-container>
@@ -115,7 +115,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 4 -->
-		<div id="guerreiro" class="container_information" style="background-image: url('_img/backgrounds/warrior5.jpg');">
+		<div id="guerreiro" class="container_information" style="background-image: url('../_img/backgrounds/warrior5.jpg');">
 			<div class="container_information_text" style="float: right;">
 				<div class="container_title">Guerreiro</div>
 				<div class="container_description" ss-container>
@@ -126,7 +126,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 5 -->
-		<div id="ladino" class="container_information"style="background-image: url('_img/backgrounds/ladino.jpg');">
+		<div id="ladino" class="container_information"style="background-image: url('../_img/backgrounds/ladino.jpg');">
 			<div class="container_information_text">
 				<div class="container_title">Ladino</div>
 				<div class="container_description" ss-container>
@@ -137,7 +137,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 6 -->
-		<div id="mago" class="container_information" style="background-image: url('_img/backgrounds/mage.jpg');">
+		<div id="mago" class="container_information" style="background-image: url('../_img/backgrounds/mage.jpg');">
 			<div class="container_information_text" style="float: right;">
 				<div class="container_title">Mago</div>
 				<div class="container_description" ss-container>
@@ -148,7 +148,7 @@
 			</div>
 		</div>
 		<!-- CLASSE 7 -->
-		<div id="paladino" class="container_information"style="background-image: url('_img/backgrounds/paladin.jpg');">
+		<div id="paladino" class="container_information"style="background-image: url('../_img/backgrounds/paladin.jpg');">
 			<div class="container_information_text">
 				<div class="container_title">Paladino</div>
 				<div class="container_description" ss-container>
