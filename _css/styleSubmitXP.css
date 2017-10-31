@@ -156,6 +156,7 @@
     transition: background-color color .75s ease-in-out;
     -moz-transition: background-color color .75s ease-in-out;
     -webkit-transition: background-color color .75 ease-in-out;
+	cursor: pointer;
 }
 
 @media only screen and (max-width:500px)
