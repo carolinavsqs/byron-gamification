@@ -28,11 +28,11 @@
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Guildas
 						<span class="sr-only">(current)</span><span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild1">guilda 1</a></li>
-						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild2">guilda 2</a></li>
-						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild3">guilda 3</a></li>
-						  <li><a class="nav-link smoothScroll" href="./pageGuild.php#guild4">guilda 4</a></li>
-						  <li><a class="nav-link" href="./pageGuild.php">ver todas</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.php#guild1">guilda 1</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.php#guild2">guilda 2</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.php#guild3">guilda 3</a></li>
+						  <li><a class="nav-link smoothScroll" href="pageGuild.php#guild4">guilda 4</a></li>
+						  <li><a class="nav-link" href="pageGuild.html">ver todas</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item active dropdown">
@@ -46,11 +46,11 @@
 						  <li><a class="nav-link smoothScroll" href="#ladino">ladino</a></li>
 						  <li><a class="nav-link smoothScroll" href="#mago">mago</a></li>
 						  <li><a class="nav-link smoothScroll" href="#paladino">paladino</a></li>
-						  <li><a class="nav-link" href="./pageClass.php">ver todas</a></li>
+						  <li><a class="nav-link" href="pageClass.html">ver todas</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item">
-						<a class="nav-link" href="./pagePoints.php">Pontuação</a>
+						<a class="nav-link" href="pagePoints.php">Pontuação</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -70,7 +70,7 @@
 					<p class="modal_login_header_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador, no momento em que você se aproximou dos portões do vilarejo. - Identifique-se!"</p>
 				</div>
 	
-				<form class="modal_login_form" action="../_controller/login.php" method="POST">
+				<form class="modal_login_form" action="_controller/login.php" method="POST">
 					<input class="modal_login_form_input modal_login_form_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
 					<input class="modal_login_form_input" type="password" placeholder="Senha" name="psw" required>
 					<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">passar pelos portões</button>

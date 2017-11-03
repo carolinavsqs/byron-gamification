@@ -32,25 +32,25 @@
 						  <li><a class="nav-link smoothScroll" href="#guild2">guilda 2</a></li>
 						  <li><a class="nav-link smoothScroll" href="#guild3">guilda 3</a></li>
 						  <li><a class="nav-link smoothScroll" href="#guild4">guilda 4</a></li>
-						  <li><a class="nav-link" href="./pageGuild.php">ver todas</a></li>
+						  <li><a class="nav-link" href="pageGuild.html">ver todas</a></li>
 						</ul>
 				    </li>
 				    <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Classes
                             <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						  <li><a class="nav-link" href="./pageClass.php#alquimista">alquimista</a></li>
-						  <li><a class="nav-link" href="./pageClass.php#arqueiro">arqueiro</a></li>
-						  <li><a class="nav-link" href="./pageClass.php#bardo">bardo</a></li>
-						  <li><a class="nav-link" href="./pageClass.php#guerreiro">guerreiro</a></li>
-						  <li><a class="nav-link" href="./pageClass.php#ladino">ladino</a></li>
-						  <li><a class="nav-link" href="./pageClass.php#mago">mago</a></li>
-						  <li><a class="nav-link" href="./pageClass.php#paladino">paladino</a></li>
-						  <li><a class="nav-link" href="./pageClass.php">ver todas</a></li>
+						  <li><a class="nav-link" href="pageClass.php#alquimista">alquimista</a></li>
+						  <li><a class="nav-link" href="pageClass.php#arqueiro">arqueiro</a></li>
+						  <li><a class="nav-link" href="pageClass.php#bardo">bardo</a></li>
+						  <li><a class="nav-link" href="pageClass.php#guerreiro">guerreiro</a></li>
+						  <li><a class="nav-link" href="pageClass.php#ladino">ladino</a></li>
+						  <li><a class="nav-link" href="pageClass.php#mago">mago</a></li>
+						  <li><a class="nav-link" href="pageClass.php#paladino">paladino</a></li>
+						  <li><a class="nav-link" href="pageClass.php">ver todas</a></li>
 						</ul>
 				    </li>
                   <li class="nav-item">
-						<a class="nav-link" href="./pagePoints.php">Pontuação</a>
+						<a class="nav-link" href="pagePoints.html">Pontuação</a>
 				  </li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -70,7 +70,7 @@
 					<p class="modal_login_header_text">"- Alto lá, viajante! - disse a guarda, em tom intimidador, no momento em que você se aproximou dos portões do vilarejo. - Identifique-se!"</p>
 				</div>
 	
-				<form class="modal_login_form" action="../_controller/login.php" method="POST">
+				<form class="modal_login_form" action="_controller/login.php" method="POST">
 					<input class="modal_login_form_input modal_login_form_input_name" type="text" placeholder="Nome de Usuário" name="usrname" required>
 					<input class="modal_login_form_input" type="password" placeholder="Senha" name="psw" required>
 					<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">passar pelos portões</button>
