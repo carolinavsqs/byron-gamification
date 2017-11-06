@@ -48,10 +48,10 @@
 
 											$classe = $_SESSION['byron_gamification']['class'];
 
-											$sql = "SELECT  `name` FROM `usuario` WHERE `class` = '".$classe."'";
+											$sql = "SELECT  `user` FROM `usuario` WHERE `class` = '".$classe."'";
 											$result = mysqli_query($conn,$sql);
 											while($row = mysqli_fetch_array($result)){
-                               					echo "<option>".$row['name']."</option>";
+                               					echo "<option>".$row['user']."</option>";
                                				}
                                				
 
