@@ -1,0 +1,86 @@
+/* NAVBAR */
+#navbar
+{
+	background-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	height: 10vh;
+	box-shadow: 1px 1px 3px 1px #969694;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#navbar_left
+{
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+@media only screen and (max-width:990px)
+{
+	#navbar
+	{
+		height: 100%;
+	}
+}
+/* END NAVBAR */
+
+/* CONTEUDO */
+.container_background
+{
+    background-image: url(../_img/backgrounds/rankingBG.jpg);
+    height: 90vh;
+    min-height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	background-attachment: fixed;
+}
+
+.container_intro_text
+{
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fff;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-right: 20%;
+	margin-left: 20%;
+	padding-top: 3%;
+	width: 60%;
+	height: 55%;
+}
+
+@media only screen and (max-width:700px)
+{
+	.container_intro_text
+	{
+		padding-top: 6%;
+	}
+}
+
+.container_title
+{
+	text-align: center;
+	color: #000;
+	font-weight: 600;
+	font-size: 16px;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+.container_description
+{
+	text-align: justify;
+	color: #5e5e56;
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	overflow-x: hidden;
+	width: 80%;
+	height: 65%;
+	padding-right: 3%;
+	margin-right: 12%;
+	margin-left: 12%;
+}

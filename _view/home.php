@@ -33,13 +33,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul id="navbar_left" class="navbar-nav mr-auto">
-                <a href=<?php echo '../_view/pageProfile.php?id='.$_SESSION['byron_gamification']['user']?> >Ver perfil</a>
-            </ul>
-            <ul id="navbar_left" class="navbar-nav mr-auto">
-                <a href='../_view/registerForm.php'>Adicionar novo membro</a>
-            </ul>
-            <ul id="navbar_left" class="navbar-nav mr-auto">
-                <a href='../_controller/logout.php'>Clique aqui para deixar a cidade!</a>
+                <a class="nav-link" href=<?php echo '../_view/pageProfile.php?id='.$_SESSION['byron_gamification']['user']?> >Ver perfil</a>
+                <a class="nav-link" href='../_view/registerForm.php'>Adicionar novo membro</a>          
+                <a class="nav-link" href='../_controller/logout.php'>Clique aqui para deixar a cidade!</a>
             </ul>
         </div>
     </nav>

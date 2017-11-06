@@ -46,7 +46,8 @@
                     <?php else: ?>
                         <div class="container_login_button_external">
                             <span class="fa fa-user-o container_login_button_external_img" aria-hidden="true"></span>
-                            <span class="container_login_button_external_text"><a href="_view/home.php">Home</a></div>
+                            <span class="container_login_button_external_text"><a href="_view/home.php">Home</a>
+                        </div>
                         </div>
                     <?php endif; ?>
 
@@ -84,7 +85,8 @@
                                 <a class="carousel_info" href="./_view/pagePoints.php" target="_blank">
                                     conheça os desafios do reino
                                 </a>
-                            </li></div>
+                            </li>
+                        </div>
 					</div>
 				</div>
 			</div>

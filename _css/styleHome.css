@@ -1,19 +1,25 @@
 /* NAVBAR */
 #navbar
 {
-	background-color: #fff;
+	background-color: #252525;
 	font-family: 'Open Sans', sans-serif;
-	height: 15vh;
+	height: 10vh;
 	box-shadow: 1px 1px 3px 1px #969694;
 	padding-left: 40px;
 	padding-right: 40px;
 }
 
+#navbar a
+{
+	font-family: 'Open Sans', sans-serif;
+    color:white;
+}
 #navbar_left
 {
 	text-transform: uppercase;
 	font-weight: 600;
 }
+
 
 @media only screen and (max-width:990px)
 {
@@ -29,7 +35,7 @@
 .container_principal_section
 {
     width:100%;
-    height:85vh; 
+    height:90vh; 
     font-family: 'Inconsolata', monospace;
     color: black;
     background-color:white;
@@ -76,4 +82,8 @@
 }
 p{
     border-bottom: 1px dotted black;
+}
+a
+{
+    color:white;
 }
