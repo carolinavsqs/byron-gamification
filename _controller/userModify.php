@@ -16,6 +16,11 @@ $linha          = mysqli_fetch_array($query_result);
         $new_dateBirthday        = $_POST['new_dateBirthday'];
         $new_dateBirthday        = stripslashes ($new_dateBirthday);
         $new_dateBirthday        = mysqli_real_escape_string($conn,$new_dateBirthday);
+        
+        $message = "Alterou sua data de nascimento";
+        $type = "edit";
+        $user = $_SESSION['byron_gamification']['user'];
+        saveLog($message, $type, $user);
     }
     else
         $new_dateBirthday        = $_SESSION['byron_gamification']['dateBirthday'];
@@ -25,6 +30,11 @@ $linha          = mysqli_fetch_array($query_result);
         $new_allignment       = $_POST['new_allignment'];
         $new_allignment       = stripslashes ($new_allignment);
         $new_allignment       = mysqli_real_escape_string($conn,$new_allignment);
+        
+        $message = "Alterou seu allignment";
+        $type = "edit";
+        $user = $_SESSION['byron_gamification']['user'];
+        saveLog($message, $type, $user);
     }
     else
         $new_allignment       = $_SESSION['byron_gamification']['allignment'];
@@ -34,6 +44,11 @@ $linha          = mysqli_fetch_array($query_result);
         $new_mbti        = $_POST['new_mbti'];
         $new_mbti        = stripslashes ($new_mbti);
         $new_mbti        = mysqli_real_escape_string($conn,$new_mbti);
+        
+        $message = "Alterou seu mbti";
+        $type = "edit";
+        $user = $_SESSION['byron_gamification']['user'];
+        saveLog($message, $type, $user);
     }
     else
     {
@@ -62,6 +77,11 @@ $linha          = mysqli_fetch_array($query_result);
         $new_pass       = stripslashes($new_pass);
         $new_pass       = mysqli_real_escape_string($conn,$new_pass);
         $password       = hash ("sha256", $new_pass);
+        
+        $message = "Alterou sua senha";
+        $type = "edit";
+        $user = $_SESSION['byron_gamification']['user'];
+        saveLog($message, $type, $user);
         
     }
     else{

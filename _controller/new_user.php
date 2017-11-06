@@ -34,19 +34,21 @@
     $queryText  = "INSERT INTO `usuario`(`user`, `name`, `class`,`dateBirthday`,`password`,`genero`,`id_guild`) VALUES
         ('".$username."','".$nome."','".$class."', '".$data."','".$password."','".$genero."','".$guild."')";
 
-    $queryResult = mysqli_query ($conn, $queryText);
+    $queryResult = mysqli_query($conn, $queryText);
 
     if (!$queryResult)
     {
         echo "<script>alert('Erro ao criar usuario!')</script>";
     }
     else
-    {
-        echo "<script>alert('Membro adicionado!')</script>";
+    {            
+        echo "<script>alert('Membro adicionado!')</script>";        
         echo "<script>window.location.href='../_view/registerForm.php'</script>";
-        $message = "Novo usuario cadastrado";
+        
+        $message = "Cadastrou um novo usuario";
         $type = "add";
         $user = $_SESSION['byron_gamification']['user'];
         saveLog($message, $type, $user);
+        
     }
 ?>
