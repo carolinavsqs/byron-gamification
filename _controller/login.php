@@ -40,6 +40,11 @@ else
     $_SESSION['byron_gamification']['exp'] = $userData['exp'] ;
     $_SESSION['byron_gamification']['id_guild'] = $userData['id_guild'] ;
     $_SESSION['byron_gamification']['picture'] = $userData['picture'] ;
+    $_SESSION['byron_gamification']['allignment'] = $userData['allignment'] ;
+    $_SESSION['byron_gamification']['about'] = $userData['about'] ;
+    $_SESSION['byron_gamification']['mbti'] = $userData['mbti'] ;
+    $_SESSION['byron_gamification']['dateBirthday'] = $userData['dateBirthday'] ;
+
 
     
     
