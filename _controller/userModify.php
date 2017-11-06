@@ -2,6 +2,7 @@
 
 session_start();
 require_once 'mysql_connect.php';
+include "log.php";
 
 $sessionID      = $_SESSION['byron_gamification']['user'];
 $query_TEXT     = "SELECT * FROM `usuario` WHERE '".$sessionID."' = `user`";
@@ -44,6 +45,11 @@ $linha          = mysqli_fetch_array($query_result);
         $new_about      = $_POST['new_about'];
         $new_about      = stripslashes ($new_about);
         $new_about      = mysqli_real_escape_string($conn,$new_about);
+        
+        $message = "Alterou seu about";
+        $type = "edit";
+        $user = $_SESSION['byron_gamification']['user'];
+        saveLog($message, $type, $user);
     }
     else
     {
