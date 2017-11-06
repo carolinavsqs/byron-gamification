@@ -7,7 +7,7 @@ require_once ("../_controller/mysql_connect.php");
 require_once ("../_controller/helper.php");
 
 
-$sessionID      = $_SESSION['byron_gamification']['user'];
+$sessionID      = $_POST['usrname'];
 $query_TEXT     = "SELECT * FROM `usuario` WHERE `user`='".$sessionID."'";
 $query_result   = mysqli_query($conn, $query_TEXT);
 $linha          = mysqli_fetch_array($query_result);
@@ -31,7 +31,7 @@ if(!empty($_POST['new_exp']))
     {
         $_SESSION['byron_gamification']['exp']     = $new_exp ;
         echo "<script> alert('deu certo filhão!');
-            window.location.href='../_view/home.php';
+            window.location.href='../_view/submitXP.php';
         </script>";
         mysqli_close ($conn);
 
@@ -39,7 +39,7 @@ if(!empty($_POST['new_exp']))
     }
     else{
         echo "<script> alert('deu erado filhão!');
-            window.location.href='../_view/home.php';
+            window.location.href='../_view/submitXP.php';
         </script>";
     }
 ?>
