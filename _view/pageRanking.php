@@ -1,3 +1,8 @@
+<?php
+    require_once ("../_controller/check_login.php");
+    require_once ("../_controller/mysql_connect.php");
+    require_once ("../_controller/helper.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -41,12 +46,29 @@
                 <div class="container_title">RANKING
                 </div>
                 <div class="container_description" ss-container>
-                    <p>1o lugar > isHaler - 125XP</p>
-                    <p>2o lugar > Kaspe - 110XP</p>
-                    <p>3o lugar > Payk - 90XP</p>
-                    <p>4o lugar > JargZ - 85XP</p>
-                    <p style="border-bottom: 1px dotted black;">5o lugar > 5ilas - 75XP</p>
-                    <p>11o lugar > USER - 25XP</p>
+                    <?php
+                        $sql = "SELECT `name`,`exp` FROM `usuario` ORDER BY `exp` DESC";
+                            $result = mysqli_query($conn,$sql);
+
+                            if( !$result ){
+                              echo 'SQL Query Failed';
+                            }else{
+
+                              $rank = 0;
+                              $last_score = false;
+                              $rows = 0;
+
+                              while($row = mysqli_fetch_array($result)){
+                                $rows++;
+                                if( $last_score!= $row['exp'] ){
+                                  $last_score = $row['exp'];
+                                  $rank = $rows;
+                                }
+                                echo "Rank ".$rank." is ".$row['name']." com exp ".$row['exp']."<br>";
+                              }
+                            }
+
+                        ?>
                 </div>
             </div>
         </div>

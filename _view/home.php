@@ -36,6 +36,8 @@
                 <a class="nav-link" href=<?php echo '../_view/pageProfile.php?id='.$_SESSION['byron_gamification']['user']?> >Ver perfil</a>
                 <a class="nav-link" href='../_view/registerForm.php'>Adicionar novo membro</a>          
                 <a class="nav-link" href='../_controller/logout.php'>Clique aqui para deixar a cidade!</a>
+                <a class="nav-link" href='../_view/pageRanking.php'>Rank!</a>
+
             </ul>
         </div>
     </nav>
