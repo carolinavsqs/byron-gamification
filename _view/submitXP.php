@@ -1,3 +1,8 @@
+<?php
+    require_once ("../_controller/check_login.php");
+    require_once ("../_controller/mysql_connect.php");
+    require_once ("../_controller/helper.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -39,7 +44,19 @@
 							<div class="register_form_title">Ora, ora, temos aqui um(a) líder de classe!</div>
 							<div class="register_form_text">> Qual membro será bonificado/penalizado?</div>
 								<select class="register_form_input" name="usrname">
-									<option>degepe</option>
+										<?php
+
+											$classe = $_SESSION['byron_gamification']['class'];
+
+											$sql = "SELECT  `user` FROM `usuario` WHERE `class` = '".$classe."'";
+											$result = mysqli_query($conn,$sql);
+											while($row = mysqli_fetch_array($result)){
+                               					echo "<option>".$row['user']."</option>";
+                               				}
+                               				
+
+										?>
+									</option>
 								</select>
 							<div class="register_form_text">> Qual quantidade de xp você gostaria de adicionar/retirar?</div>
 							<div class="register_form_desc">Caso necessário, acesse a tabela de pontos. Adicione apenas o valor da soma, no caso de mais de um valor.</div>
