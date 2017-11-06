@@ -105,10 +105,10 @@
                     <i class="modal_header_text">Deixe em branco os campos que você não quer alterar.</i>
 				</div>
 	
-				<form class="modal_login_form" action="../_controller/usuarioAltera.php" method="POST">
+				<form class="modal_login_form" action="../_controller/userModify.php" method="POST">
 					<input class="modal_login_form_input" type="password" placeholder="Senha" name="new_pasw">
                     <input class="modal_login_form_input" type="password" placeholder="Confirmar nova senha" name="new_pasw2">
-                    <input class="modal_login_form_input" type="text" placeholder="Data de Nascimento" name="new_dateBirthday">
+                    <input class="modal_login_form_input" type="date" placeholder="Data de Nascimento" name="new_dateBirthday">
                     <input class="modal_login_form_input" type="text" placeholder="MBTI" name="new_mbti">
                     <input class="modal_login_form_input" type="text" placeholder="Alinhamento" name="new_allignment">
                     <input class="modal_login_form_input" type="text" placeholder="Sobre mim" name="new_about">
