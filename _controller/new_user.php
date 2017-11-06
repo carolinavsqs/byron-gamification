@@ -8,8 +8,10 @@
         die ();
     }   
     
-    $remove     = $_POST['data'];
-    $trimmed    = str_replace('-', '', $remove);
+    $new = explode("-",$_POST['data']);
+    $new_date = $new[2]."-".$new[1]."-".$new[0];
+
+    $trimmed    = str_replace('-', '', $new_date);
 
     $username   = stripslashes($_POST['usrname']);
     $nome       = stripslashes($_POST['nome']);
