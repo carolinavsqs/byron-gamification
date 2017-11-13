@@ -47,7 +47,7 @@
                 </div>
                 <div class="container_description" ss-container>
                     <?php
-                        $sql = "SELECT `name`,`exp` FROM `usuario` ORDER BY `exp` DESC";
+                        $sql = "SELECT `user`,`name`,`exp` FROM `usuario` ORDER BY `exp` DESC";
                             $result = mysqli_query($conn,$sql);
 
                             if( !$result ){
@@ -66,7 +66,7 @@
                                 }
                                 echo "<tr>
                                             <th><pre>POSIÇÃO          ".$rank."           </pre></th>
-                                            <th><pre>".$row['name']."           </pre></th>
+                                            <th><pre><a href='../_view/pageProfile.php?id=".$row['user']."'>".$row['name']."</a>           </pre></th>
                                             <th><pre>".$row['exp']."</pre></th>
                                           </tr>
                                         ";
