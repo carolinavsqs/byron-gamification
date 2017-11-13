@@ -1,5 +1,6 @@
 <?php
     require_once ("../_controller/check_login.php");
+    include "../_controller/helper.php";
 ?>
 
 <!DOCTYPE html>
@@ -49,19 +50,10 @@
                 Distribuição de XP
             </div>
             <div class="container_column_section" ss-container>
-                <p>>damasio atribuiu +5xp para jotaVe
-                </p>
-                <p>>Munhoz atribuiu +5xp para Alexx
-                </p>
-                <p>>Óboli atribuiu +5xp para Brenin
-                </p>
-                <p>>Lars atribuiu +5xp para Lari
-                </p>
-                <p>>Wel atribuiu +5xp para Bruna
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <?php 
+                    recupera_xp();
+                ?>
+                
             </div>
         </div>
         <div class="columns">
@@ -69,14 +61,9 @@
                 Alterações em geral
             </div>
             <div class="container_column_section" ss-container>
-                <p>>carol-vasques4 alterou sua foto de perfil
-                </p>
-                <p>>damasio adicionou conquista para Sineek
-                </p>
-                <p>>jotaVe modificou informações de perfil
-                </p>
-                <p>>Aeróboli alterou seu Sobre
-                </p>
+                <?php 
+                    recupera_edit();
+                ?>
             </div>
         </div>
         <div class="columns">
@@ -84,14 +71,9 @@
                 O que há de novo?
             </div>
             <div class="container_column_section" ss-container>
-                <p>>carol-vasques4 adicionou patch note
-                </p>
-                <p>>damasio adicionou funcionalidade de usuário
-                </p>
-                <p>>jotaVe adicionou novo membro
-                </p>
-                <p>>carol-vasques alterou a classe de Sineek
-                </p>
+                <?php
+                    recupera_add();
+                ?>
             </div>
         </div>
         <div class="columns">
@@ -99,12 +81,9 @@
                Cemitério
             </div>
             <div class="container_column_section" ss-container>
-                <p>>damasio removeu uma página
-                </p>
-                <p>>carol-vasques4 removeu elemento de perfil
-                </p>
-                <p>>jotaVe removeu texto da página ....
-                </p>
+                <?php
+                    recupera_remove();
+                ?>
             </div>
         </div>
         </div>

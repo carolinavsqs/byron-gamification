@@ -47,7 +47,7 @@
                 </div>
                 <div class="container_description" ss-container>
                     <?php
-                        $sql = "SELECT `name`,`exp` FROM `usuario` ORDER BY `exp` DESC";
+                        $sql = "SELECT `user`,`name`,`exp` FROM `usuario` ORDER BY `exp` DESC";
                             $result = mysqli_query($conn,$sql);
 
                             if( !$result ){
@@ -57,15 +57,29 @@
                               $rank = 0;
                               $last_score = false;
                               $rows = 0;
-
+                              echo "<table>
+                                <tr>
+                                    <th>POSIÇÃO</th>
+                                    <th>NOME</th>
+                                    <th>EXP</th>
+                                </tr>
+                                <tr></tr>";
                               while($row = mysqli_fetch_array($result)){
                                 $rows++;
                                 if( $last_score!= $row['exp'] ){
                                   $last_score = $row['exp'];
                                   $rank = $rows;
                                 }
-                                echo "Rank ".$rank." is ".$row['name']." com exp ".$row['exp']."<br>";
+                                echo "
+                                <tr>
+                                            <th><pre>    ".$rank."           </pre></th>
+                                            <th><pre><a href='../_view/pageProfile.php?id=".$row['user']."'>".$row['name']."</a>           </pre></th>
+                                            <th><pre>".$row['exp']."</pre></th>
+                                          </tr>
+                                        ";
+                                     
                               }
+                              echo "</table>";
                             }
 
                         ?>

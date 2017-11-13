@@ -32,7 +32,7 @@
 						  <li><a class="nav-link smoothScroll" href="#guild2">guilda 2</a></li>
 						  <li><a class="nav-link smoothScroll" href="#guild3">guilda 3</a></li>
 						  <li><a class="nav-link smoothScroll" href="#guild4">guilda 4</a></li>
-						  <li><a class="nav-link" href="pageGuild.html">ver todas</a></li>
+						  <li><a class="nav-link" href="pageGuild.php">ver todas</a></li>
 						</ul>
 				    </li>
 				    <li class="nav-item dropdown">
@@ -50,7 +50,7 @@
 						</ul>
 				    </li>
                   <li class="nav-item">
-						<a class="nav-link" href="pagePoints.html">Pontuação</a>
+						<a class="nav-link" href="pagePoints.php">Pontuação</a>
 				  </li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">

@@ -32,7 +32,7 @@
 						  <li><a class="nav-link smoothScroll" href="pageGuild.php#guild2">guilda 2</a></li>
 						  <li><a class="nav-link smoothScroll" href="pageGuild.php#guild3">guilda 3</a></li>
 						  <li><a class="nav-link smoothScroll" href="pageGuild.php#guild4">guilda 4</a></li>
-						  <li><a class="nav-link" href="pageGuild.html">ver todas</a></li>
+						  <li><a class="nav-link" href="pageGuild.php">ver todas</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item active dropdown">
@@ -46,7 +46,7 @@
 						  <li><a class="nav-link smoothScroll" href="#ladino">ladino</a></li>
 						  <li><a class="nav-link smoothScroll" href="#mago">mago</a></li>
 						  <li><a class="nav-link smoothScroll" href="#paladino">paladino</a></li>
-						  <li><a class="nav-link" href="pageClass.html">ver todas</a></li>
+						  <li><a class="nav-link" href="pageClass.php">ver todas</a></li>
 						</ul>
 				  </li>
 				  <li class="nav-item">
