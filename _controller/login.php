@@ -1,5 +1,4 @@
 <?php
-include "log.php";
 require_once 'mysql_connect.php';
 
 if (!empty($_POST['usrname']) or !empty($_POST['psw'])){

@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once 'mysql_connect.php';
-    include "log.php";
+  
 
     if (!isset($_POST['usrname']) or !isset($_POST['nome']) or !isset($_POST['class']) or !isset($_POST['data']) or !isset($_POST['Nick']) or !isset($_POST['guild'])){
         $input_data = $_POST['data'];
@@ -42,12 +42,7 @@
     }
     else
     {     
-        
-        $message = "Cadastrou um novo usuario";
-        $type = "add";
-        $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
-        
+   
         echo "<script>alert('Membro adicionado!')</script>";        
         echo "<script>window.location.href='../_view/registerForm.php'</script>";
         
