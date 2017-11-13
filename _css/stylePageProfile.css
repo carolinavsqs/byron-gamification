@@ -69,6 +69,7 @@
 	border-bottom: 1px dotted #fff;
 	padding-top: 2px;
 	padding-bottom: 2px;
+    cursor: pointer;
 }
 
 .container_profile_top_button_right

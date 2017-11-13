@@ -25,10 +25,10 @@
 		<div class="container_profile_bg"> <!-- usuário do perfil escolhe -->
 			<div class="container_profile">
 				<div class="container_profile_top">
-                    <a class="container_profile_top_button_left">home</a>
+                    <a href="home.php" class="container_profile_top_button_left">home</a>
                             <a class="container_profile_top_button_left">taverna</a>
-                            <a class="container_profile_top_button_left">hall da fama</a>
-                            <a class="container_profile_top_button_left">sobre o reino</a>
+                            <a href="pageRanking.php" class="container_profile_top_button_left">hall da fama</a>
+                            <a href="pageGuild.php" class="container_profile_top_button_left">sobre o reino</a>
 							<a class="container_profile_top_button_left">atividade</a>
 							<a class="container_profile_top_button_left">distribuir xp</a>
 							<a class="container_profile_top_button_left">administrador</a>
