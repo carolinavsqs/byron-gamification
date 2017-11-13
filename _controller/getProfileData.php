@@ -1,5 +1,5 @@
 <?php
-    $queryText = "SELECT * FROM usuario WHERE user = '".$_GET['id']."'";
+    $queryText = "SELECT * FROM usuario WHERE user = '".$_SESSION['byron_gamification']['user']."'";
     $queryResult = mysqli_query ($conn, $queryText);
     if (!$queryResult)
     {
