@@ -113,6 +113,7 @@ require_once ("../_controller/helper.php");
 				<input class="modal_login_form_input" type="text" placeholder="MBTI" name="new_mbti">
 				<input class="modal_login_form_input" type="text" placeholder="Alinhamento" name="new_allignment">
 				<input class="modal_login_form_input" type="text" placeholder="Sobre mim" name="new_about">
+                <input class="modal_login_form_input" type="file" name="pic" placeholder="Insira sua Imagem de perfil" accept="image/*">
 				<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">Alterar Perfil</button>
 			</form>
 		</div>

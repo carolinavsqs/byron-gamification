@@ -1,0 +1,53 @@
+*{
+	box-sizing: border-box;
+}
+
+.container_taverna_screen{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 550px;
+	background-color: white;
+}
+.container_taverna{
+	height: 112vh;
+	background-color: grey;
+}
+.container_taverna_item{
+	text-decoration:none;
+	color:white;
+	background-color: transparent;
+}
+
+.container_taverna_item:hover{
+	text-decoration: none;
+	color:white;
+}
+
+.navbar-collapse ul{
+	width: 100%;
+}
+.member_box{
+	border:1px solid black;
+	width: 50%;
+}
+
+.user_img{
+	max-height: 130px;
+}
+
+.team_members{
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height: 300px;
+	max-width: 80%;
+	margin:auto;
+
+}
+
+@media screen and (min-width: 720px){
+	.container_taverna{
+	height: 100vh;
+}
+
+}
