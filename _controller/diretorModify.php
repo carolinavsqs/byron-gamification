@@ -30,7 +30,7 @@ if(!empty($_POST['new_exp']))
     if ($query_result)
     {
         $_SESSION['byron_gamification']['exp']     = $new_exp ;
-        echo "<script> alert('deu certo filhão!');
+        echo "<script> alert('Experiencia atualizada!');
             window.location.href='../_view/submitXP.php';
         </script>";
         mysqli_close ($conn);
@@ -38,7 +38,7 @@ if(!empty($_POST['new_exp']))
         exit;
     }
     else{
-        echo "<script> alert('deu erado filhão!');
+        echo "<script> alert('Não foi possive!');
             window.location.href='../_view/submitXP.php';
         </script>";
     }

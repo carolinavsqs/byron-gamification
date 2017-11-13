@@ -57,15 +57,22 @@
                               $rank = 0;
                               $last_score = false;
                               $rows = 0;
-
+                              echo "<table>";
                               while($row = mysqli_fetch_array($result)){
                                 $rows++;
                                 if( $last_score!= $row['exp'] ){
                                   $last_score = $row['exp'];
                                   $rank = $rows;
                                 }
-                                echo "Rank ".$rank." is ".$row['name']." com exp ".$row['exp']."<br>";
+                                echo "<tr>
+                                            <th><pre>POSIÇÃO          ".$rank."           </pre></th>
+                                            <th><pre>".$row['name']."           </pre></th>
+                                            <th><pre>".$row['exp']."</pre></th>
+                                          </tr>
+                                        ";
+                                     
                               }
+                              echo "</table>";
                             }
 
                         ?>

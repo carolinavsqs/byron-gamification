@@ -44,7 +44,8 @@ CREATE TABLE `guilda` (
   `name` varchar(30) NOT NULL,
   `valuesGuilda` varchar(300) NOT NULL,
   `description` varchar(100) DEFAULT NULL,
-  `crest` varchar(256) NOT NULL
+  `crest` varchar(256) NOT NULL,
+  `exp` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
