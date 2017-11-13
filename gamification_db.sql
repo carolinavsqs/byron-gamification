@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `gamification_db`
 --
+CREATE DATABASE IF NOT EXISTS gamification_db;
 
 -- --------------------------------------------------------
 
@@ -30,7 +31,8 @@ CREATE TABLE `conquista` (
   `id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
   `description` varchar(100) DEFAULT NULL,
-  `image` varchar(256) NOT NULL
+  `image` varchar(256) NOT NULL,
+    `crest` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -44,7 +46,8 @@ CREATE TABLE `guilda` (
   `name` varchar(30) NOT NULL,
   `valuesGuilda` varchar(300) NOT NULL,
   `description` varchar(100) DEFAULT NULL,
-  `crest` varchar(256) NOT NULL
+  `crest` varchar(256) NOT NULL,
+    `exp` int not null
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -152,28 +155,8 @@ INSERT INTO `usuario` (`user`, `password`, `name`, `class`, `exp`, `notActive`, 
 ('carol', '30cf6d90d5cbeedd660ace7d54229fecf9aab1bdcb4fd7678dad7b781d994f88', 'Carolina Vasques', 'Bardo', 1000, NULL, 1, NULL, 0, '1997-04-29', 0, '', NULL, '', '', '', '', 'F'),
 ('fasjkla', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'tysfgahja', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
 ('fletcher', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'carolina', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'F'),
-('gabbs', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'gabriel', 'bardo', 0, 0, 1, 'null', 0, '1996-06-22', 0, 'as vezes vai', '', 'eu so legal poxa', '', '', '', 'M'),
-('gabriel', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'gab', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('iououoi', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'iouuiou', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'F'),
-('ksajksa', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'sasasasasasa', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('oihnk,', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'oijkmihn', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('rafa', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'rafael pereira', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('rafael', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'rafinha', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('sa7s89a', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'saytsuaspo', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'F'),
-('sagjk', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'saghfsahj', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'F'),
-('sagjsha', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'sgafhsja', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'F'),
-('sahjsklaÃ§', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'saghsjaksa', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('sajgk', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'sygfhsjakl', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('sasasa', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'sasasasa', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('satuysioap', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'saduisopa', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('satyusioap', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'satyusaiopas', 'Arqueiro', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'F'),
-('sayuisoap', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'sayuisoapsa', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('sgahja', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'fsahgskjla', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('syauisoa', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'sautysyauisa', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('uelito', 'f582f814a6e18c1b8a7d652f9f34b83eb8498fc69bbc96039c83aad98a3fb42a', 'UÃ©lito', 'Arqueiro', NULL, NULL, 1, NULL, 0, '1996-10-31', 0, '', NULL, '', '', '', '', 'M'),
-('vbnm,', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'bvnm,', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'M'),
-('Wyru', 'e173e3192fe65313f287992d08d70f3e05cd01307064da84ed6a195a07a2de37', 'Will', 'Guerreiro', NULL, NULL, 1, NULL, 0, '1995-02-22', 0, '', NULL, '', '', '', '', 'M'),
-('ytuy', '10b4cf304d159860533f40710c7ad3124cfc054951be368f60c154d86e435b96', 'sasayyu', 'bardo', NULL, NULL, 1, NULL, 0, '1996-06-22', 0, '', NULL, '', '', '', '', 'F');
+('gabbs', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'gabriel', 'bardo', 0, 0, 1, 'null', 0, '1996-06-22', 0, 'as vezes vai', '', 'eu so legal poxa', '', '', '', 'M');
+
 
 -- --------------------------------------------------------
 
