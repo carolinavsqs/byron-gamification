@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> adfa01488e250d7ecfb37c149d5a5bd98cee7884
 function convert_date_db_to_gui($date){
     $new = explode("-",$date);
     $new_date = $new[2]."/".$new[1]."/".$new[0];
@@ -17,6 +22,7 @@ function convert_genre_db_to_gui($genre){
         return "Feminino";
     }
 }
+<<<<<<< HEAD
 function recupera_xp(){
     require_once ('mysql_connect.php');
     require_once ("check_login.php");
@@ -69,6 +75,8 @@ function recupera_edit(){
    }    
 }
 
+=======
+>>>>>>> adfa01488e250d7ecfb37c149d5a5bd98cee7884
 function exp_total_guild($id){
 	require_once ("check_login.php");
 	require_once ("mysql_connect.php");
