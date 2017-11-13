@@ -57,15 +57,22 @@
                               $rank = 0;
                               $last_score = false;
                               $rows = 0;
-                              echo "<table>";
+                              echo "<table>
+                                <tr>
+                                    <th>POSIÇÃO</th>
+                                    <th>NOME</th>
+                                    <th>EXP</th>
+                                </tr>
+                                <tr></tr>";
                               while($row = mysqli_fetch_array($result)){
                                 $rows++;
                                 if( $last_score!= $row['exp'] ){
                                   $last_score = $row['exp'];
                                   $rank = $rows;
                                 }
-                                echo "<tr>
-                                            <th><pre>POSIÇÃO          ".$rank."           </pre></th>
+                                echo "
+                                <tr>
+                                            <th><pre>    ".$rank."           </pre></th>
                                             <th><pre><a href='../_view/pageProfile.php?id=".$row['user']."'>".$row['name']."</a>           </pre></th>
                                             <th><pre>".$row['exp']."</pre></th>
                                           </tr>
