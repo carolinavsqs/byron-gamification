@@ -56,6 +56,7 @@
     width:100%;
     content: "";
     display: table;
+    margin:0;!important
 }
 
 .container_column_section_header
