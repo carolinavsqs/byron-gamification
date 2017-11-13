@@ -12,6 +12,12 @@
     $queryResult = mysqli_query($conn, $queryText);
     if ($query_result)
     {
+        $mensagem = "adicionou um trofeu para";
+        $type = add;
+        $user = $_SESSION['byron_gamification']['user'];
+        $userModify = $linha['user'];
+        saveLog($mensagem, $type, $user, $userModify);
+        
         header("location:../_view/home.php");
             echo "<script> 
                 alert('Trofeu Atribuido com sucesso!');

@@ -14,10 +14,10 @@
         $new_name       = stripslashes ($new_name);
         $new_name       = mysql_real_escape_string ($new_name);
     
-        $message = "Editou o nome do trofeu";
-        $type = "edit";
+        $mensagem = "editou o nome do trofeu .$linha['name'] para .$new_trophy_name";
+        $type = edit;
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($mensagem, $type, $user);
     }
     else
         $new_name       =   $linha['name'];
@@ -28,10 +28,10 @@
         $new_description        = stripslashes ($new_description);
         $new_description        = mysql_real_escape_string ($new_description);
         
-        $message = "Editou a descrição da conquista";
-        $type = "edit";
+        $mensagem = "editou a descricao do trofeu .$linha['description']";
+        $type = edit;
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($mensagem, $type, $user);
     }
     else
         $new_description        = $linha['description'];
@@ -69,11 +69,7 @@
                 window.location.href='../index.php';
             </script>";
 	    mysqli_close ($conn);
-	    
-	    $message = "Trofeu editado";
-		$type = "edit";
-	    $user = $_SESSION['byron_gamification']['user'];
-	    saveLog($message, $type, $user);
+	   
 	    exit;
 	}else{
         echo "<script> 

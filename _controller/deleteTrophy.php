@@ -8,10 +8,11 @@
 
 	if (mysqli_query($conn, $sql)) {
     echo "Deletado com sucesso";
-    $message = "Trofeu deletado";
-	$type = "delete";
-    $user = $_SESSION['byron_gamification']['user'];
-    saveLog($message, $type, $user);
+    $mensagem = "deletou um trofeu de";
+        $type = remove;
+        $user = $_SESSION['byron_gamification']['user'];
+        $userModify = $sessionID['user'];
+        saveLog($mensagem, $type, $user, $userModify);
 
 	} else {
 	    echo "Não foi possivel deletar " . mysqli_error($conn);

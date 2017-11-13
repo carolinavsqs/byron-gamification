@@ -34,7 +34,12 @@ if(!empty($_POST['new_exp']))
             window.location.href='../_view/submitXP.php';
         </script>";
         mysqli_close ($conn);
-
+        
+        $mensagem = "adicionou xp para .$new_exp";
+        $type = xp;
+        $user = $_SESSION['byron_gamification']['user'];
+        $userModify = $linha['user'];
+        saveLog($mensagem, $type, $user, $userModify);
         exit;
     }
     else{

@@ -14,10 +14,10 @@
         $new_name       = stripslashes ($new_name);
         $new_name       = mysql_real_escape_string ($new_name);
     
-        $message = "Editou o nome da conquista";
-        $type = "edit";
+        $mensagem = "editou o nome da conquista .$linha['name'] para .$new_achiv_name";
+        $type = edit;
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($mensagem, $type, $user);
     }
     else
         $new_name       =   $linha['name'];
@@ -28,10 +28,10 @@
         $new_description        = stripslashes ($new_description);
         $new_description        = mysql_real_escape_string ($new_description);
         
-        $message = "Editou a descrição da conquista";
-        $type = "edit";
+        $mensagem = "editou a descricao da conquista .$linha['name']";
+        $type = edit;
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($mensagem, $type, $user);
     }
     else
         $new_description        = $linha['description'];
@@ -52,10 +52,10 @@
             </script>";
 	    mysqli_close ($conn);
 	    
-	    $message = "Conquista editada";
-		$type = "edit";
-	    $user = $_SESSION['byron_gamification']['user'];
-	    saveLog($message, $type, $user);
+	    $mensagem = "editou a conquista .$linha['name']";
+        $type = edit;
+        $user = $_SESSION['byron_gamification']['user'];
+        saveLog($mensagem, $type, $user);
 	    exit;
 	}else{
         echo "<script> 

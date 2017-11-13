@@ -40,7 +40,7 @@ function recupera_add(){
     $queryResult = mysqli_query($conn, $queryText);
     
    while($xp = mysqli_fetch_array($queryResult)){
-        echo "<p>'".$xp['user']."' '".$xp['message']."'</p>";
+        echo "<p>'".$xp['user']."' '".$xp['message']."' '".$xp['user_modify']."'</p>";
    }    
 }
 function recupera_remove(){
