@@ -38,7 +38,7 @@ require_once ("../_controller/helper.php");
 			<div class="container_profile_left">
 				<div class="profile_img_bg_box">
 					<div class="profile_img_bg">
-						<img class="profile_img_inner" src="../<?php echo $userData['picture'] ?>">
+						<img alt="" class="profile_img_inner" src="../<?php echo $userData['picture'] ?>">
 					</div>
 				</div>
 				<div class="left_links_box">

@@ -72,6 +72,16 @@ $linha          = mysqli_fetch_array($query_result);
                 
                 $new_pic = '_img/profile_pic/'.$novoNome;
             }
+            else{
+                echo "<script> alert('Imagem muito grande!');
+                    window.location.href='../_view/home.php';
+                </script>";
+            }
+        }
+        else{
+            echo "<script> alert('Apenas imagens jpg,jpeg,gif ou png!');
+                    window.location.href='../_view/home.php';
+                </script>";
         }
     }else{
         $new_pic = $linha['picture'];
