@@ -68,6 +68,8 @@ $linha           = mysqli_fetch_array($query_result);
 
     
     $new_notActive = (isset($_POST['active']) ? 1 : 0);
+
+    $new_isDirector = (isset($_POST['director']) ? 1 : 0);
     
 
     if(!empty($_POST['new_pasw']) and $_POST['new_pasw']== $_POST['new_pasw2'])
@@ -86,7 +88,7 @@ $linha           = mysqli_fetch_array($query_result);
     $my_user          = $linha['user'];
 
 
-    $query_name = "UPDATE usuario SET id_guild='".$new_id_guild."',class='".$new_class."',password='".$password."',mbti='".$new_mbti."',allignment='".$new_allignment."',dateBirthday='".$new_dateBirthday."',notActive='".$new_notActive."' WHERE  user = '".$my_user."'";
+    $query_name = "UPDATE usuario SET id_guild='".$new_id_guild."',class='".$new_class."',password='".$password."',mbti='".$new_mbti."',allignment='".$new_allignment."',dateBirthday='".$new_dateBirthday."',notActive='".$new_notActive."',isDirector='".$new_isDirector."' WHERE  user = '".$my_user."'";
 
     $query_result = mysqli_query($conn, $query_name);
 

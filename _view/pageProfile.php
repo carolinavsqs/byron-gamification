@@ -30,8 +30,14 @@ require_once ("../_controller/helper.php");
 				<a href="pageRanking.php" class="container_profile_top_button_left">hall da fama</a>
 				<a href="pageGuild.php" class="container_profile_top_button_left">sobre o reino</a>
 				<a class="container_profile_top_button_left">atividade</a>
-				<a class="container_profile_top_button_left">distribuir xp</a>
-				<button class="container_profile_top_button_left" onclick="document.getElementById('edit_adm').style.display='block'">administrador</button>
+				<?php
+				if($userData['isDirector'] == 1)
+					echo '<a class="container_profile_top_button_left" onclick="window.location =\'submitXP.php\'">distribuir xp</a>';
+				
+				if($userData['class'] == 'bardo' OR 'Bardo'){
+					echo '<button class="container_profile_top_button_left" onclick="document.getElementById(\'edit_adm\').style.display=\'block\'">administrador</button>';
+				}
+				?>
 
 				<a class="container_profile_top_button_right">olá, <?php echo $userData['user'];?>!</a>
 			</div>
@@ -137,8 +143,10 @@ require_once ("../_controller/helper.php");
 				<input class="modal_login_form_input" type="text" placeholder="Alinhamento" name="new_allignment">
 				<input class="modal_login_form_input" type="text" name="new_id_guild" placeholder="Guilda">
 				<input class="modal_login_form_input" type="text" name="new_class" placeholder="Classe">
-				<div class="d-flex align-items-start justify-content-around p-1"><h6>Usuário Inativo:</h2>
-				<input class="modal_login_form_input_checkbox" type="checkbox" <?php if(isChecked($userData['user']) == 1) echo "checked"; ?> name="active" value="1"></div>
+				<div class="d-inline-flex p-2 align-items-start center-content-around p-1"><h6>Usuário Inativo:</h2>
+				<input class="modal_login_form_input_checkbox" type="checkbox" <?php if(isActive($userData['user']) == 1) echo "checked"; ?> name="active" value="1"></div>
+				<div class="d-inline-flex p-2 align-items-start center-content-around p-1"><h6>Diretor:</h2>
+				<input class="modal_login_form_input_checkbox" type="checkbox" <?php if(isDirector($userData['user']) == 1) echo "checked"; ?> name="director" value="1"></div>
 				<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">Alterar Perfil</button>
 			</form>
 		</div>

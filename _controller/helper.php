@@ -92,7 +92,7 @@ function exp_total_guild($id){
 	return $exp_total;
 }
 
-function isChecked($id){
+function isActive($id){
     require_once ("mysql_connect.php");
 
     $query_text = "SELECT `notActive` FROM `usuario` WHERE '".$id."' = `user`";
@@ -101,6 +101,21 @@ function isChecked($id){
     $linha          = mysqli_fetch_array($query_result);
 
     if($linha['notActive'] == 1){
+        return 1;
+    }
+    return 0;
+
+}
+
+function isDirector($id){
+    require_once ("mysql_connect.php");
+
+    $query_text = "SELECT `isDirector` FROM `usuario` WHERE '".$id."' = `user`";
+    $conn = mysqli_connect("localhost", "root", "", "gamification_db") or die();
+    $query_result   = mysqli_query($conn, $query_text);
+    $linha          = mysqli_fetch_array($query_result);
+
+    if($linha['isDirector'] == 1){
         return 1;
     }
     return 0;
