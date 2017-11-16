@@ -38,7 +38,7 @@ require_once ("../_controller/helper.php");
 			<div class="container_profile_left">
 				<div class="profile_img_bg_box">
 					<div class="profile_img_bg">
-						<img class="profile_img_inner" src="http://pa1.narvii.com/6256/4ec1d780edfb3f3ad303b0e6104d9a079c74e537_hq.gif">
+						<img class="profile_img_inner" src="../<?php echo $userData['picture'] ?>">
 					</div>
 				</div>
 				<div class="left_links_box">
@@ -106,7 +106,7 @@ require_once ("../_controller/helper.php");
 				<i class="modal_header_text">Deixe em branco os campos que você não quer alterar.</i>
 			</div>
 
-			<form class="modal_login_form" action="../_controller/userModify.php" method="POST">
+			<form class="modal_login_form" action="../_controller/userModify.php" method="POST" enctype="multipart/form-data">
 				<input class="modal_login_form_input" type="password" placeholder="Senha" name="new_pasw">
 				<input class="modal_login_form_input" type="password" placeholder="Confirmar nova senha" name="new_pasw2">
 				<input class="modal_login_form_input" type="date" placeholder="Data de Nascimento" name="new_dateBirthday">
@@ -128,7 +128,8 @@ require_once ("../_controller/helper.php");
 				<i class="modal_header_text">Deixe em branco os campos que você não quer alterar.</i>
 			</div>
 
-			<form class="modal_login_form" action="../_controller/adminModify.php" method="POST">
+			<form class="modal_login_form" action="../_controller/adminModify.php" method="POST" >
+				<input type='hidden' name='usrname' value='<?php echo $userData['user'];?>'/> 
 				<input class="modal_login_form_input" type="password" placeholder="Senha" name="new_pasw">
 				<input class="modal_login_form_input" type="password" placeholder="Confirmar nova senha" name="new_pasw2">
 				<input class="modal_login_form_input" type="date" placeholder="Data de Nascimento" name="new_dateBirthday">
@@ -137,8 +138,7 @@ require_once ("../_controller/helper.php");
 				<input class="modal_login_form_input" type="text" name="new_id_guild" placeholder="Guilda">
 				<input class="modal_login_form_input" type="text" name="new_class" placeholder="Classe">
 				<div class="d-flex align-items-start justify-content-around p-1"><h6>Usuário Inativo:</h2>
-				<input id="ativo" class="modal_login_form_input_checkbox" type="checkbox" name="new_notActive"></div>
-				
+				<input class="modal_login_form_input_checkbox" type="checkbox" <?php if(isChecked($userData['user']) == 1) echo "checked"; ?> name="active" value="1"></div>
 				<button class="modal_login_button_internal modal_login_button_internal_submit" type="submit">Alterar Perfil</button>
 			</form>
 		</div>

@@ -20,10 +20,10 @@ $linha          = mysqli_fetch_array($query_result);
         $message = "Alterou sua data de nascimento";
         $type = "edit";
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($message, $type, $user,$user);
     }
     else
-        $new_dateBirthday        = $_SESSION['byron_gamification']['dateBirthday'];
+        $new_dateBirthday        = $linha['dateBirthday'];
     
     if (!empty($_POST['new_allignment']))
     {
@@ -34,10 +34,10 @@ $linha          = mysqli_fetch_array($query_result);
         $message = "Alterou seu allignment";
         $type = "edit";
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($message, $type, $user,$user);
     }
     else
-        $new_allignment       = $_SESSION['byron_gamification']['allignment'];
+        $new_allignment       = $linha['allignment'];
     
     if (!empty($_POST['new_mbti']))
     {
@@ -48,12 +48,35 @@ $linha          = mysqli_fetch_array($query_result);
         $message = "Alterou seu mbti";
         $type = "edit";
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($message, $type, $user,$user);
     }
     else
     {
-        $new_mbti        = $_SESSION['byron_gamification']['mbti'];
+        $new_mbti        = $linha['mbti'];
     }
+
+    if(!empty($_FILES['pic']['name'])){
+            
+        $arquivo_tmp = $_FILES['pic']['tmp_name'];
+        $nome = $_FILES['pic']['name'];
+
+        $extensao = pathinfo($nome, PATHINFO_EXTENSION );
+        $extensao = strtolower($extensao);
+     
+        if(@strstr('.jpg;.jpeg;.gif;.png',$extensao)){
+            $novoNome = uniqid (time()) . "." . $extensao;
+     
+            $destino = '../_img/profile_pic/'.$novoNome;
+     
+            if (@move_uploaded_file ( $arquivo_tmp, $destino ) ) {
+                
+                $new_pic = '_img/profile_pic/'.$novoNome;
+            }
+        }
+    }else{
+        $new_pic = $linha['picture'];
+    }
+
             
     if (!empty($_POST['new_about']))
     {
@@ -64,11 +87,11 @@ $linha          = mysqli_fetch_array($query_result);
         $message = "Alterou seu about";
         $type = "edit";
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($message, $type, $user,$user);
     }
     else
     {
-        $new_about      = $_SESSION['byron_gamification']['about'];
+        $new_about      = $linha['about'];
     }
 
     if(!empty($_POST['new_pasw']) and $_POST['new_pasw']== $_POST['new_pasw2'])
@@ -81,7 +104,7 @@ $linha          = mysqli_fetch_array($query_result);
         $message = "Alterou sua senha";
         $type = "edit";
         $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user);
+        saveLog($message, $type, $user,$user);
         
     }
     else{
@@ -89,7 +112,7 @@ $linha          = mysqli_fetch_array($query_result);
     }
 
 
-    $query_name = "UPDATE usuario SET dateBirthday='".$new_dateBirthday."', allignment='".$new_allignment."', mbti='".$new_mbti."',about='".$new_about."',password ='".$password."' WHERE  user = '".$sessionID."'";
+    $query_name = "UPDATE usuario SET dateBirthday='".$new_dateBirthday."', allignment='".$new_allignment."', mbti='".$new_mbti."',about='".$new_about."',password ='".$password."',picture='".$new_pic."' WHERE  user = '".$sessionID."'";
 
     $query_result = mysqli_query($conn, $query_name);
 
