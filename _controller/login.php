@@ -35,7 +35,6 @@ else
     session_start ();
     $_SESSION['byron_gamification']['user'] = $userData['user'] ;
     $_SESSION['byron_gamification']['name'] = $userData['name'] ;
-    $_SESSION['byron_gamification']['class'] = $userData['class'] ;
     $_SESSION['byron_gamification']['exp'] = $userData['exp'] ;
     $_SESSION['byron_gamification']['id_guild'] = $userData['id_guild'] ;
     $_SESSION['byron_gamification']['picture'] = $userData['picture'] ;
@@ -43,7 +42,6 @@ else
     $_SESSION['byron_gamification']['about'] = $userData['about'] ;
     $_SESSION['byron_gamification']['mbti'] = $userData['mbti'] ;
     $_SESSION['byron_gamification']['dateBirthday'] = $userData['dateBirthday'] ;
-    $_SESSION['byron_gamification']['isDirector'] = $userData['isDirector'] ;
 
 
     
