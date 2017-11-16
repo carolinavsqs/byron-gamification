@@ -3,10 +3,10 @@
 {
 	background-color: #252525;
 	font-family: 'Open Sans', sans-serif;
-	height: 10vh;
+/*	height: 10vh;*/
 	box-shadow: 1px 1px 3px 1px #969694;
-	padding-left: 40px;
-	padding-right: 40px;
+/*	padding-left: 40px;*/
+/*	padding-right: 40px;*/
 }
 
 #navbar a
@@ -19,29 +19,50 @@
 	text-transform: uppercase;
 	font-weight: 600;
 }
+.nav_menu{
+    width: 100%;
+}
+.nav_menu li{
+    text-align: center;
+}
 
-
-@media only screen and (max-width:990px)
+/*@media only screen and (max-width:990px)
 {
 	#navbar
 	{
 		height: 100%;
 	}
-}
+}*/
 /* END NAVBAR */
 
 /* CONTEUDO */
 
+body
+{
+    background-color: #cecece;
+}
+
+.home_page_container{
+    height: 100vh;
+}
+
+.wrapper
+{
+    position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 550px;
+	background-color: white;
+}
+
 .container_principal_section
 {
-    width:100%;
-    height:90vh; 
     font-family: 'Inconsolata', monospace;
     color: black;
     background-color:white;
 }
 
-.columns
+/*.columns
 {
     float:left;
     width:25%;
@@ -49,20 +70,20 @@
     height:100%;
     background-color:transparent;
     border-left: 1px dotted black;
-}
+}*/
 
-.row{
+/*.row{
     height:100%;
     width:100%;
     content: "";
     display: table;
     margin:0;!important
-}
+}*/
 
 .container_column_section_header
 {
     width:100%;
-    height:8%;
+/*    height:8%;*/
     justify-content: center;
     text-align: center;
     border-bottom: 1px dotted #cecece;

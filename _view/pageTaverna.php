@@ -56,32 +56,126 @@
 			<div class="row justify-content-center mt-4">
 				<h1>MEMBROS</h1>
 			</div>
-
+            <div class="row justify-content-center">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Classes
+                    </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a id="dropdown-alq" class="dropdown-item" href="#">Alquilmistas</a>
+                            <a id="dropdown-arq" class="dropdown-item" href="#">Arqueiros</a>
+                            <a id="dropdown-bar" class="dropdown-item" href="#">Bardos</a>
+                            <a id="dropdown-gue" class="dropdown-item" href="#">Guerreiros</a>
+                            <a id="dropdown-lad" class="dropdown-item" href="#">Ladinos</a>
+                            <a id="dropdown-mag" class="dropdown-item" href="#">Magos</a>
+                            <a id="dropdown-pal" class="dropdown-item" href="#">Paladinos</a>
+                        </div>
+                </div>
+            </div>
 			<div class="row justify-content-center mt-4">
-				<div class="member-box team_members">
-					<div class="row justify-content-center p-2">
-						<h3>Nome das equipes</h3>
-					</div>
-					<div class="row">
-						<div class="d-flex flex-wrap">
-							<?php 
-								for($j=0;$j<5;$j++)
-								{
-									for($i=0;$i<5;$i++)
-									{
-										echo'<div class="col-4 col-md-4"><img class="img-fluid user_img" src="../_img/'.'FDP'.'.jpeg" alt="FDP.jpg"></div>';
-									}
-								}
-							?>
-						</div>
-							
-					</div>
-				</div>
+                <div id="alquimistas" class="row justify-content-center" hidden>
+                    <div class="row justify-content-center">
+                       <h2>Alquimistas</h2> 
+                    </div>
+                    <div class="row flex-wrap">
+                        
+                    </div>
+                </div>
+                <div id="arqueiros" class="row justify-content-center" hidden="true">
+                    <div class="row justify-content-center">
+                       <h2>Arqueiros</h2> 
+                    </div>
+                    <div class="row flex-wrap">
+                        
+                    </div>
+                </div>
+                <div id="bardos" class="row justify-content-center" hidden="true">
+                    <div class="row justify-content-center">
+                       <h2>Bardos</h2> 
+                    </div>
+                    <div class="row flex-wrap">
+                        
+                    </div>
+                </div>
+                <div id="guerreiros" class="row justify-content-center" hidden="true">
+                    <div class="row justify-content-center">
+                       <h2>Guerreiros</h2> 
+                    </div>
+                    <div class="row flex-wrap">
+                        
+                    </div>
+                </div>
+                <div id="ladinos" class="row justify-content-center" hidden="true">
+                    <div class="row justify-content-center">
+                       <h2>Ladinos</h2> 
+                    </div>
+                    <div class="row flex-wrap">
+                        
+                    </div>
+                </div>
+                <div id="magos" class="row justify-content-center" hidden="true">
+                    <div class="row justify-content-center">
+                       <h2>Magos</h2> 
+                    </div>
+                    <div class="row flex-wrap">
+                        
+                    </div>
+                </div>
+                <div id="paladinos" class="row justify-content-center" hidden="true">
+                    <div class="row justify-content-center">
+                       <h2>Paladinos</h2> 
+                    </div>
+                    <div class="row flex-wrap">
+                        
+                    </div>
+                </div>
 			</div>
 		</div>
 	</div>
 
 </div>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var last = "";
+            $("#dropdown-alq").click(function(){
+                $(last).attr("hidden","true");
+                $("#alquimistas").removeAttr("hidden");
+                last = "#alquimistas";
+            });
+            $("#dropdown-arq").click(function(){
+                $(last).attr("hidden","true");
+                $("#arqueiros").removeAttr("hidden");
+                last = "#arqueiros";
+            });
+            $("#dropdown-bar").click(function(){
+                $(last).attr("hidden","true");
+                $("#bardos").removeAttr("hidden");
+                last = "#bardos";
+            });
+            $("#dropdown-gue").click(function(){
+                $(last).attr("hidden","true");
+                $("#guerreiros").removeAttr("hidden");
+                last = "#guerreiros";
+            });
+            $("#dropdown-lad").click(function(){
+                $(last).attr("hidden","true");
+                $("#ladinos").removeAttr("hidden");
+                last = "#ladinos";
+            });
+            $("#dropdown-mag").click(function(){
+                $(last).attr("hidden","true");
+                $("#magos").removeAttr("hidden");
+                last = "#magos";
+            });
+            $("#dropdown-pal").click(function(){
+                $(last).attr("hidden","true");
+                $("#paladinos").removeAttr("hidden");
+                last = "#paladinos";
+            });
+            
+        });
+    </script>
 <body>
 
 
