@@ -31,10 +31,10 @@ require_once ("../_controller/helper.php");
 				<a href="pageGuild.php" class="container_profile_top_button_left">sobre o reino</a>
 				<a class="container_profile_top_button_left">atividade</a>
 				<?php
-				if($userData['isDirector'] == 1)
+				if($_SESSION['byron_gamification']['isDirector'] == 1)
 					echo '<a class="container_profile_top_button_left" onclick="window.location =\'submitXP.php\'">distribuir xp</a>';
 				
-				if($userData['class'] == 'bardo' OR 'Bardo'){
+				if($_SESSION['byron_gamification']['class'] == 'bardo' OR 'Bardo'){
 					echo '<button class="container_profile_top_button_left" onclick="document.getElementById(\'edit_adm\').style.display=\'block\'">administrador</button>';
 				}
 				?>
