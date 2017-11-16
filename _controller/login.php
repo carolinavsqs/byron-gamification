@@ -43,6 +43,7 @@ else
     $_SESSION['byron_gamification']['about'] = $userData['about'] ;
     $_SESSION['byron_gamification']['mbti'] = $userData['mbti'] ;
     $_SESSION['byron_gamification']['dateBirthday'] = $userData['dateBirthday'] ;
+    $_SESSION['byron_gamification']['isDirector'] = $userData['isDirector'] ;
 
 
     
