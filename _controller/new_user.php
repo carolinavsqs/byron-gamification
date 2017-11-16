@@ -31,8 +31,10 @@
 
     $password   = hash ("sha256", $password1);
 
-    $queryText  = "INSERT INTO `usuario`(`user`, `name`, `class`,`dateBirthday`,`password`,`genero`,`id_guild`) VALUES
-        ('".$username."','".$nome."','".$class."', '".$data."','".$password."','".$genero."','".$guild."')";
+    $imgD = '_img/profile_pic/default.gif';
+
+    $queryText  = "INSERT INTO `usuario`(`user`, `name`, `class`,`dateBirthday`,`password`,`genero`,`id_guild`,`picture`) VALUES
+        ('".$username."','".$nome."','".$class."', '".$data."','".$password."','".$genero."','".$guild."','".$imgD."')";
 
     $queryResult = mysqli_query($conn, $queryText);
 

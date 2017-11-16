@@ -1,6 +1,14 @@
 *{
 	box-sizing: border-box;
 }
+.classe-title{
+	margin: 0 auto;
+	font-size: 2rem;
+	font-weight: 500;
+}
+.display-grid {
+	display: grid;
+}
 
 .container_taverna_screen{
 	position: relative;
@@ -13,6 +21,7 @@
 	height: 112vh;
 	background-color: grey;
 }
+
 .container_taverna_item{
 	text-decoration:none;
 	color:white;
@@ -44,6 +53,8 @@
 	margin:auto;
 
 }
+
+
 
 @media screen and (min-width: 720px){
 	.container_taverna{

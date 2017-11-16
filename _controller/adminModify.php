@@ -97,8 +97,8 @@ $linha           = mysqli_fetch_array($query_result);
         echo "<script> alert('Alterado com Sucesso!');
             window.location.href='../_view/home.php';
         </script>";
-        mysqli_close ($conn);
         
+        mysqli_close ($conn);   
         exit;
     }else{
         echo "<script> alert('Falha ao editar!');
