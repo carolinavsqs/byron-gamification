@@ -71,17 +71,21 @@ $linha          = mysqli_fetch_array($query_result);
             if (@move_uploaded_file ( $arquivo_tmp, $destino ) ) {
                 
                 $new_pic = '_img/profile_pic/'.$novoNome;
+                $message = "Alterou sua imagem";
+                $type = "edit";
+                $user = $_SESSION['byron_gamification']['user'];
+                saveLog($message, $type, $user,$user);
             }
             else{
-                echo "<script> alert('Imagem muito grande!');
-                    window.location.href='../_view/home.php';
-                </script>";
+                echo '<script> alert("Imagem muito grande!"");
+                    window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
+                </script>';
             }
         }
         else{
-            echo "<script> alert('Apenas imagens jpg,jpeg,gif ou png!');
-                    window.location.href='../_view/home.php';
-                </script>";
+            echo '<script> alert("Apenas imagens jpg,jpeg,gif ou png!"");
+                    window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
+                </script>';
         }
     }else{
         $new_pic = $linha['picture'];
@@ -111,11 +115,6 @@ $linha          = mysqli_fetch_array($query_result);
         $new_pass       = mysqli_real_escape_string($conn,$new_pass);
         $password       = hash ("sha256", $new_pass);
         
-        $message = "Alterou sua senha";
-        $type = "edit";
-        $user = $_SESSION['byron_gamification']['user'];
-        saveLog($message, $type, $user,$user);
-        
     }
     else{
          $password      = $linha['password'];
@@ -126,20 +125,18 @@ $linha          = mysqli_fetch_array($query_result);
 
     $query_result = mysqli_query($conn, $query_name);
 
-    if ($query_result)
-	{
-	    $_SESSION['byron_gamification']['dateBirthday']		= $new_dateBirthday ;
-	    $_SESSION['byron_gamification']['allignment'] 		= $new_allignment ;
-	    $_SESSION['byron_gamification']['mbti']				= $new_mbti ;
-	    $_SESSION['byron_gamification']['about'] 			= $new_about ;
+    if ($query_result){
+        $_SESSION['byron_gamification']['dateBirthday']     = $new_dateBirthday ;
+        $_SESSION['byron_gamification']['allignment']       = $new_allignment ;
+        $_SESSION['byron_gamification']['mbti']             = $new_mbti ;
+        $_SESSION['byron_gamification']['about']            = $new_about ;
 
-
-	    echo '<script> alert("Alterado com Sucesso!");
+        echo '<script> alert("Alterado com Sucesso!");
             window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
         </script>';
-	    mysqli_close ($conn);
-	    exit;
-	}
+        mysqli_close ($conn);
+        exit;
+    }
     else{
         echo '<script> alert("Alterado com Sucesso!");
             window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
