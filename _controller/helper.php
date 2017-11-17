@@ -137,4 +137,18 @@ function isBardo($id){
 
 }
 
+function allMembers($classe){
+    $sql = "SELECT `user`,`class`,`picture`,`name` FROM `usuario`";
+    $conn = mysqli_connect("localhost", "root", "", "gamification_db") or die();
+    $result = mysqli_query($conn,$sql);
+    while($row = mysqli_fetch_array($result)){
+        if(strtolower($row['class']) == strtolower($classe)){
+            echo "<div style='display: grid;'><label style='margin: auto; font-size: 115%; font-weight: 600; color: gray;',>".$row['user']."</label><a href='../_view/pageProfile.php?id=".$row['user']."'>
+            <img style='height:120px;width:120px; object-fit: cover;' src='../".$row['picture']."'>
+            </div>
+            </a>";
+        }
+    }
+}
+
 ?>
