@@ -47,15 +47,18 @@ CREATE TABLE `guilda` (
   `valuesGuilda` varchar(300) NOT NULL,
   `description` varchar(100) DEFAULT NULL,
   `crest` varchar(256) NOT NULL,
-    `exp` int not null
+  `exp` int not null
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `guilda`
 --
 
-INSERT INTO `guilda` (`id`, `name`, `valuesGuilda`, `description`, `crest`) VALUES
-(1, 'Teste', 'um teste qualquer', 'ainda é apenas um teste', 'nao tem brasao');
+INSERT INTO `guilda` (`id`, `name`, `valuesGuilda`, `description`, `crest`,`exp`) VALUES
+(1, 'Teste1', 'um teste qualquer', 'Guild 1', '_img/iconG/1.png/',0),
+(2, 'Teste2', 'um teste qualquer', 'Guild 2', '_img/iconG/2.png',0),
+(3, 'Teste3', 'um teste qualquer', 'Guild 3', '_img/iconG/3.png',0),
+(4, 'Teste4', 'um teste qualquer', 'Guild 4', '_img/iconG/4.png',0);
 
 -- --------------------------------------------------------
 
