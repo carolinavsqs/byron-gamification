@@ -23,50 +23,68 @@ function recupera_xp(){
     require_once ("check_login.php");
     
     $test = 'xp';
-    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."'";
+    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."' ORDER BY `id` DESC";
+    $conn = mysqli_connect("localhost", "root", "", "gamification_db") or die();
     $queryResult = mysqli_query($conn, $queryText);
     
-   while($xp = mysqli_fetch_array($queryResult)){
-        echo "<p>'".$xp['user']."' '".$xp['message']."' '".$xp['user_modify']."'</p>";
-   }    
+    while($xp = mysqli_fetch_array($queryResult)){
+        $new = explode(" ",$xp['hora']);
+        $new_date = explode("-",$new[0]);
+        $date = $new_date[2]."/".$new_date[1]."/".$new_date[0];
+
+        echo "<p>".$date." - ".$new[1]." -- '".$xp['user']."' '".$xp['message']."' '".$xp['user_modify']."'</p>";
+    }    
 }
+
 function recupera_add(){
     require_once ('mysql_connect.php');
     require_once ("check_login.php");
     
     $test = 'add';
-    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."'";
+    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."' ORDER BY `id` DESC";
     $conn = mysqli_connect("localhost", "root", "", "gamification_db") or die();
     $queryResult = mysqli_query($conn, $queryText);
     
    while($xp = mysqli_fetch_array($queryResult)){
-        echo "<p>'".$xp['user']."' '".$xp['message']."' '".$xp['user_modify']."'</p>";
-   }    
+        $new = explode(" ",$xp['hora']);
+        $new_date = explode("-",$new[0]);
+        $date = $new_date[2]."/".$new_date[1]."/".$new_date[0];
+
+        echo "<p>".$date." - ".$new[1]." -- '".$xp['user']."' '".$xp['message']."' '".$xp['user_modify']."'</p>";
+   }      
 }
 function recupera_remove(){
     require_once ('mysql_connect.php');
     require_once ("check_login.php");
     
     $test = 'remove';
-    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."'";
+    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."' ORDER BY `id` DESC";
     $conn = mysqli_connect("localhost", "root", "", "gamification_db") or die();
     $queryResult = mysqli_query($conn, $queryText);
     
    while($xp = mysqli_fetch_array($queryResult)){
-        echo "<p>'".$xp['user']."' '".$xp['message']."'</p>";
-   }    
+        $new = explode(" ",$xp['hora']);
+        $new_date = explode("-",$new[0]);
+        $date = $new_date[2]."/".$new_date[1]."/".$new_date[0];
+
+        echo "<p>".$date." - ".$new[1]." -- '".$xp['user']."' '".$xp['message']."'</p>";
+   }   
 }
 function recupera_edit(){
     require_once ('mysql_connect.php');
     require_once ("check_login.php");
     
     $test = 'edit';
-    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."'";
+    $queryText = "SELECT * FROM `log` WHERE `type` = '".$test."' ORDER BY `id` DESC";
     $conn = mysqli_connect("localhost", "root", "", "gamification_db") or die();
     $queryResult = mysqli_query($conn, $queryText);
     
    while($xp = mysqli_fetch_array($queryResult)){
-        echo "<p>'".$xp['user']."' '".$xp['message']."'</p>";
+        $new = explode(" ",$xp['hora']);
+        $new_date = explode("-",$new[0]);
+        $date = $new_date[2]."/".$new_date[1]."/".$new_date[0];
+
+        echo "<p>".$date." - ".$new[1]." -- '".$xp['user']."' '".$xp['message']."'</p>";
    }    
 }
 
