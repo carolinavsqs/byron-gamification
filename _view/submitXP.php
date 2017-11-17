@@ -2,6 +2,7 @@
     require_once ("../_controller/check_login.php");
     require_once ("../_controller/mysql_connect.php");
     require_once ("../_controller/helper.php");
+    require_once ("../_controller/getProfileData.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,40 +25,34 @@
 		<div class="container_profile_bg"> <!-- usuário do perfil escolhe -->
 			<div class="container_profile">
 				<div class="container_profile_top">
-                    <a class="container_profile_top_button_left">home</a>
-                    <a class="container_profile_top_button_left">taverna</a>
-                    <a class="container_profile_top_button_left">hall da fama</a>
-					<a class="container_profile_top_button_left" href="./pageGuild.php">sobre o reino</a>
-					<a class="container_profile_top_button_left">atividade</a>
-					<a class="container_profile_top_button_left" href="./submitXP.html">distribuir xp</a>
-						<div class="container_profile_top_button_left dropdown">
-							<div class="dropdown-toggle" data-toggle="dropdown">administrador<span class="caret"></span></div>
-							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" style="color: #303030;" href="./registerForm.php">cadastrar usuário</a></li>
-							</ul>
-						</div>
-                    <a class="container_profile_top_button_right">olá, hsmcarol_4!</a>
+                    <a class="container_profile_top_button_left" href="home.php">home</a>
+                    <a class="container_profile_top_button_left" href="pageTaverna.php">taverna</a>
+                    <a class="container_profile_top_button_left" href="pageRanking.php">hall da fama</a>
+					<a class="container_profile_top_button_left" href="pageGuild.php">sobre o reino</a>
+                    <a class="container_profile_top_button_right" href="<?php echo '../_view/pageProfile.php?id='.$_SESSION['byron_gamification']['user']?>">olá, <?php echo $_SESSION['byron_gamification']['user']?></a>
 				</div>
 				<div class="container_profile_bottom">
 					<div class="register_form_content" ss-container>
 						<form class="register_form" action="../_controller/diretorModify.php" method="POST">
 							<div class="register_form_title">Ora, ora, temos aqui um(a) líder de classe!</div>
-							<div class="register_form_text">> Qual membro será bonificado/penalizado?</div>
+							<div class="register_form_text"> Qual membro será bonificado/penalizado?
 								<select class="register_form_input" name="usrname">
 										<?php
+											$classe = $userData['class'];
 
-											$classe = $_SESSION['byron_gamification']['class'];
-
-											$sql = "SELECT  `user`,`name` FROM `usuario` WHERE `class` = '".$classe."'";
+											$sql = "SELECT `user`,`class`,`name` FROM `usuario`";
+											$conn = mysqli_connect("localhost", "root", "", "gamification_db") or die();
 											$result = mysqli_query($conn,$sql);
 											while($row = mysqli_fetch_array($result)){
-                               					echo "<option value=".$row['user'].">".$row['name']."</option>";
-                               				}
+												if(strtolower($row['class']) == strtolower($classe)){
+	                               					echo "<option value=".$row['user'].">".$row['user']."</option>";
+	                               				}
+	                               			}
                                				
 
 										?>
-									</option>
 								</select>
+								</div>
 							<div class="register_form_text">> Qual quantidade de xp você gostaria de adicionar/retirar?</div>
 							<div class="register_form_desc">Caso necessário, acesse a tabela de pontos. Adicione apenas o valor da soma, no caso de mais de um valor.</div>
 							<input class="register_form_input" type="text" name="new_exp" placeholder="Ex: +10 ou -5">

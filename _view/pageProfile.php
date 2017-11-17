@@ -26,16 +26,21 @@ require_once ("../_controller/helper.php");
 		<div class="container_profile">
 			<div class="container_profile_top">
 				<a href="home.php" class="container_profile_top_button_left">home</a>
-				<a class="container_profile_top_button_left">taverna</a>
+				<a href ="pageTaverna.php" class="container_profile_top_button_left">taverna</a>
 				<a href="pageRanking.php" class="container_profile_top_button_left">hall da fama</a>
 				<a href="pageGuild.php" class="container_profile_top_button_left">sobre o reino</a>
-				<a class="container_profile_top_button_left">atividade</a>
 				<?php
 				if(isDirector($_SESSION['byron_gamification']['user']) == '1')
-					echo '<a class="container_profile_top_button_left" onclick="window.location =\'submitXP.php\'">distribuir xp</a>';
+					echo '<a  class="nav-link" href="submitXP.php?id='.$_SESSION['byron_gamification']['user'].'">distribuir XP</a>';
 				
 				if(isBardo($_SESSION['byron_gamification']['user']) == '1'){
-					echo '<button class="container_profile_top_button_left" onclick="document.getElementById(\'edit_adm\').style.display=\'block\'">administrador</button>';
+					echo'<div class="container_profile_top_button_left dropdown">
+							<div class="dropdown-toggle" data-toggle="dropdown">administrador<span class="caret"></span></div>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" style="color: #303030;" href="./registerForm.php">cadastrar usuário</a></li>
+								<li><a class="dropdown-item" style="color: #303030;"><button class="container_profile_top_button_left" onclick="document.getElementById(\'edit_adm\').style.display=\'block\'">alterar Dados</a></li></button>
+							</ul>
+						</div>';
 				}
 				?>
 

@@ -33,11 +33,11 @@
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul id="navbar_left" class="navbar-nav mr-auto">
                 <a class="nav-link" href="home.php">Notícias</a>
-                <a class="nav-link" href='#'>Taverna</a>
+                <a class="nav-link" href='pageTaverna.php'>Taverna</a>
                 <a class="nav-link" href='pageGuild.php'>Reino</a>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <a  class="nav-link" href="pageProfile.php">Perfil</a>
+                <a  class="nav-link" href="<?php echo '../_view/pageProfile.php?id='.$_SESSION['byron_gamification']['user']?>">Perfil</a>
             </ul>
         </div>
     </nav>

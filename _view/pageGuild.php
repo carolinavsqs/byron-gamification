@@ -1,3 +1,9 @@
+<?php
+
+require_once ("../_controller/mysql_connect.php");
+require_once ("../_controller/helper.php");
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -54,9 +60,8 @@
 				  </li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li  onclick="document.getElementById('login').style.display='block'"    class="nav-item">
-						<a class="nav-link" href="#">Identifique-se!</a>
-					</li>
+					<a class="nav-link" href="Home.php">Home!</a>
+
 				</ul>
 			</div>
 		</nav>
