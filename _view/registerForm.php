@@ -40,6 +40,9 @@
 					<button class="register_form_submit" type="submit">fazer o registro no livro da guilda</button>
 				</form>
 			</div>
+            <div class="row justify-content-end ml-0 mr-0">
+				<a class="text-muted go_back_home mr-1 mt-2" style="font-size: 0.7em;" href="http://localhost/byron-gamification/_view/home.php">Voltar para Home</a>
+			</div>
 		</div>
 	</div>
 		<!-- JAVASCRIPT -->
