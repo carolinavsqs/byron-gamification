@@ -31,7 +31,7 @@ require_once ("../_controller/helper.php");
 				<a href="pageGuild.php" class="container_profile_top_button_left">sobre o reino</a>
 				<?php
 				if(isDirector($_SESSION['byron_gamification']['user']) == '1')
-					echo '<a  class="nav-link" href="submitXP.php?id='.$_SESSION['byron_gamification']['user'].'">distribuir XP</a>';
+					echo '<a  class="container_profile_top_button_left dropdown" href="submitXP.php?id='.$_SESSION['byron_gamification']['user'].'">distribuir XP</a>';
 				
 				if(isBardo($_SESSION['byron_gamification']['user']) == '1'){
 					echo'<div class="container_profile_top_button_left dropdown">
