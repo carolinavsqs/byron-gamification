@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once 'mysql_connect.php';
+    require_once 'log.php';
   
 
     if (!isset($_POST['usrname']) or !isset($_POST['nome']) or !isset($_POST['class']) or !isset($_POST['data']) or !isset($_POST['Nick']) or !isset($_POST['guild'])){
@@ -41,13 +42,18 @@
     if (!$queryResult)
     {
         echo "<script>alert('Erro ao criar usuario!')</script>";
+        exit;
     }
     else
     {     
    
         echo "<script>alert('Membro adicionado!')</script>";        
         echo "<script>window.location.href='../_view/registerForm.php'</script>";
-        
-        
+        $mensagem = "cadastrou um novo usuario";
+        $type = 'add';
+        $user = $_SESSION['byron_gamification']['user'];
+        $userModify = $username;
+        saveLog($mensagem, $type, $user, $userModify);
+        mysqli_close ($conn); 
     }
 ?>

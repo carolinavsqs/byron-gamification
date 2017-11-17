@@ -5,6 +5,7 @@ require_once 'mysql_connect.php';
 require_once ("../_controller/check_login.php");
 require_once ("../_controller/mysql_connect.php");
 require_once ("../_controller/helper.php");
+require_once ("../_controller/log.php");
 
 
 $sessionID      = $_POST['usrname'];
@@ -30,11 +31,13 @@ if(!empty($_POST['new_exp']))
     if ($query_result)
     {
         $_SESSION['byron_gamification']['exp']     = $new_exp ;
-        echo "<script> alert('Experiencia atualizada!');
-            window.location.href='../_view/submitXP.php';
-        </script>";
-        $mensagem = "adicionou xp para .$new_exp";
-        $type = xp;
+        echo '<script> alert("Experiencia atualizada!");
+            window.location.href="../_view/submitXP.php?id='.$_SESSION['byron_gamification']['user'].'";
+        </script>';
+
+
+        $mensagem = "mudou ".$new_exp." de xp para";
+        $type = 'xp';
         $user = $_SESSION['byron_gamification']['user'];
         $userModify = $linha['user'];
         saveLog($mensagem, $type, $user, $userModify);

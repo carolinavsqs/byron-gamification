@@ -27,7 +27,7 @@ function recupera_xp(){
     $queryResult = mysqli_query($conn, $queryText);
     
    while($xp = mysqli_fetch_array($queryResult)){
-        echo "<p>'".$xp['user']."' '".$xp['message']."'</p>";
+        echo "<p>'".$xp['user']."' '".$xp['message']."' '".$xp['user_modify']."'</p>";
    }    
 }
 function recupera_add(){
@@ -72,24 +72,24 @@ function recupera_edit(){
 
 
 function exp_total_guild($id){
-	require_once ("check_login.php");
-	require_once ("mysql_connect.php");
+    require_once ("check_login.php");
+    require_once ("mysql_connect.php");
 
-	$exp_total = 0;
+    $exp_total = 0;
     $sessionID      = $id;
     $query_text = "SELECT `exp` FROM `usuario` WHERE `id_guild` = '".$sessionID."'";
-	$query_result   = mysqli_query($conn, $query_text);
+    $query_result   = mysqli_query($conn, $query_text);
     while($row = mysqli_fetch_array($query_result)){
-		$exp_total+=$row['exp'];
-	}
+        $exp_total+=$row['exp'];
+    }
 
-	$query_TEXT     = "SELECT `exp` FROM `guilda` WHERE `id`='".$sessionID."'";
-	$query_result   = mysqli_query($conn, $query_TEXT);
-	$linha          = mysqli_fetch_array($query_result);
+    $query_TEXT     = "SELECT `exp` FROM `guilda` WHERE `id`='".$sessionID."'";
+    $query_result   = mysqli_query($conn, $query_TEXT);
+    $linha          = mysqli_fetch_array($query_result);
 
-	$exp_total     	+= $linha['exp'];
+    $exp_total      += $linha['exp'];
 
-	return $exp_total;
+    return $exp_total;
 }
 
 function isActive($id){

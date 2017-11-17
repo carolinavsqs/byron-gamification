@@ -72,11 +72,15 @@ require_once ("../_controller/helper.php");
 					</div>
 
 					<div class="container_profile_right_top_right" style="flex-direction:column">
-						<div onclick="document.getElementById('edit').style.display='block'" class="container_profile_edit" style="width: 100%;height: 15px;">
-							<span style="float:right">
-								<i class="fa fa-cog" aria-hidden="true"></i>
-							</span>
-						</div>
+						<?php
+						if($_SESSION['byron_gamification']['user'] == $userData['user']){
+							echo '<div onclick="document.getElementById(\'edit\').style.display=\'block\'" class="container_profile_edit" style="width: 100%;height: 15px;">
+								<span style="float:right">
+									<i class="fa fa-cog" aria-hidden="true"></i>
+								</span>
+							</div>';
+						}
+						?>
 						<div style="display: flex; justify-content: space-between">
 							<div class="container_profile_crest">
 								<?php
