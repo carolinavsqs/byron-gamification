@@ -103,7 +103,7 @@ require_once ("../_controller/helper.php");
 				</div>
 				<div class="container_profile_right_bottom">
 					<div class="container_profile_right_bottom_left">
-						<p class="profile_about_title" style="margin-top: 28%;">sobre mim</p>
+						<p class="profile_about_title" style="margin-top: 0%;">sobre mim</p>
 						<div class="profile_about_box">
 							<p class="profile_about"><?php echo $userData['about'] ?></p>    
 						</div>
