@@ -77,23 +77,22 @@
                 <div id="alquimistas" class="row justify-content-center" hidden>
                     <div class="row justify-content-center display-grid">
                        <div class="classe-title">Alquimistas</div> 
-                    </div>
                     <div class="row flex-wrap">
                         <?php allMembers("Alquimista")?>
+                    </div>
                     </div>
                 </div>
                 <div id="arqueiros" class="row justify-content-center" hidden="true">
                     <div class="row justify-content-center display-grid">
                        <div class="classe-title">Arqueiros</div> 
-                    </div>
                     <div class="row flex-wrap">
                         <?php allMembers("Arqueiro")?>
+                    </div>
                     </div>
                 </div>
                 <div id="bardos" class="row justify-content-center" hidden="true">
                     <div class="row justify-content-center display-grid">
                        <div class="classe-title">Bardos</div> 
-                    
 	                    <div class="row flex-wrap">
 	                        <?php allMembers("Bardo")?>
 	                    </div>
@@ -102,33 +101,33 @@
                 <div id="guerreiros" class="row justify-content-center" hidden="true">
                     <div class="row justify-content-center display-grid">
                        <div class="classe-title">Guerreiros</div> 
-                    </div>
                     <div class="row flex-wrap">
                         <?php allMembers("Guerreiro")?>
+                    </div>
                     </div>
                 </div>
                 <div id="ladinos" class="row justify-content-center" hidden="true">
                     <div class="row justify-content-center display-grid">
                        <div class="classe-title">Ladinos</div> 
-                    </div>
                     <div class="row flex-wrap">
                         <?php allMembers("Ladino")?>
+                    </div>
                     </div>
                 </div>
                 <div id="magos" class="row justify-content-center" hidden="true">
                     <div class="row justify-content-center display-grid">
                        <div class="classe-title">Magos</div> 
-                    </div>
                     <div class="row flex-wrap">
                         <?php allMembers("Mago")?>
+                    </div>
                     </div>
                 </div>
                 <div id="paladinos" class="row justify-content-center" hidden="true">
                     <div class="row justify-content-center display-grid">
                        <div class="classe-title">Paladinos</div> 
-                    </div>
                     <div class="row flex-wrap">
                         <?php allMembers("Paladino")?>
+                    </div>
                     </div>
                 </div>
 			</div>
