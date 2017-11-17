@@ -134,16 +134,16 @@ $linha          = mysqli_fetch_array($query_result);
 	    $_SESSION['byron_gamification']['about'] 			= $new_about ;
 
 
-	    echo "<script> alert('Alterado com Sucesso!');
-            window.location.href='../_view/home.php';
-        </script>";
+	    echo '<script> alert("Alterado com Sucesso!");
+            window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
+        </script>';
 	    mysqli_close ($conn);
 	    exit;
 	}
     else{
-        echo "<script> alert('Ocorreu um erro. Tente novamente!');
-            window.location.href='../_view/home.php';
-        </script>";
+        echo '<script> alert("Alterado com Sucesso!");
+            window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
+        </script>';
     }
 
 ?>

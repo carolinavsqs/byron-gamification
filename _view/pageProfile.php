@@ -44,7 +44,7 @@ require_once ("../_controller/helper.php");
 				}
 				?>
 
-				<a class="container_profile_top_button_right">olá, <?php echo $userData['user'];?>!</a>
+				<a class="container_profile_top_button_right" href=<?php echo '../_view/pageProfile.php?id='.$_SESSION['byron_gamification']['user']?>>olá, <?php echo $_SESSION['byron_gamification']['user'];?>!</a>
 			</div>
 			<div class="container_profile_left">
 				<div class="profile_img_bg_box">

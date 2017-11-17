@@ -94,16 +94,16 @@ $linha           = mysqli_fetch_array($query_result);
 
     if ($query_result)  
     {
-        echo "<script> alert('Alterado com Sucesso!');
-            window.location.href='../_view/home.php';
-        </script>";
+        echo '<script> alert("Alterado com Sucesso!");
+            window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
+        </script>';
         
         mysqli_close ($conn);   
         exit;
     }else{
-        echo "<script> alert('Falha ao editar!');
-            window.location.href='../_view/home.php';
-        </script>";
+        echo '<script> alert("Falha ao editar!");
+            window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
+        </script>';
     }
 
 ?>
