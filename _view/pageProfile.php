@@ -68,7 +68,7 @@ require_once ("../_controller/helper.php");
 						<div class="profile_top_text">> GÊNERO: <?php echo convert_genre_db_to_gui($userData['genero']); ?></div>
 						<div class="profile_top_text">> MBTI: <?php echo $userData['mbti']; ?></div>
 						<div class="profile_top_text">> ALINHAMENTO: <?php echo $userData['allignment']; ?></div>
-						<div class="profile_top_text">> DATA DE NASCIMENTO: <?php echo convert_date_db_to_gui($userData['dateBirthday']); ?></div>   
+						<div class="profile_top_text">> DATA DE NASCIMENTO: <?php echo convert_date_db_to_gui($userData['dateBirthday']); ?></div>
 					</div>
 
 					<div class="container_profile_right_top_right" style="flex-direction:column">
@@ -79,13 +79,17 @@ require_once ("../_controller/helper.php");
 						</div>
 						<div style="display: flex; justify-content: space-between">
 							<div class="container_profile_crest">
-								<img src="../_img/backgrounds/mage-icon.png" style="width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;">
+								<?php
+									imageClass($userData['class']);
+								?>
 								<div class="crest_container">
 									<p class="profile_about_title">CLASSE</p>
 								</div>
 							</div>
 							<div class="container_profile_crest">
-								<img src="../_img/backgrounds/brasao.png" style="width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;">
+								<?php
+									imageGuild($userData['id_guild']);
+								?>
 								<div class="crest_container">
 									<p class="profile_about_title">GUILDA</p>
 								</div>

@@ -151,4 +151,12 @@ function allMembers($classe){
     }
 }
 
+function imageClass($class){
+    echo "<img src='../_img/iconClass/".$class.".png' style='width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;'>";
+}
+
+function imageGuild($guild){
+    echo "<img src='../_img/iconG/".$guild.".png' style='width:100%; border: 1px dotted #000; padding: 2% 2% 2% 2%;'>";
+}
+
 ?>
