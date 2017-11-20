@@ -9,15 +9,21 @@ require_once ("../_controller/helper.php");
 <head>
 	<!--CSS-->
 	<link rel="stylesheet" href="../_css/stylePageProfile.css" type="text/css">
+	
 	<!--BOOTSTRAP-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- JQUERY -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../_js/smoothscroll.js"></script> 
+    <script type="text/javascript" src="../_js/simple-scrollbar.min.js"></script>
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet"> 
+	<link rel="stylesheet" href="../_css/simple-scrollbar.css" type="text/css">
 	<meta charset='utf-8'>
 </head>
 <body>
@@ -30,20 +36,20 @@ require_once ("../_controller/helper.php");
 				<a href="pageRanking.php" class="container_profile_top_button_left">hall da fama</a>
 				<a href="pageGuild.php" class="container_profile_top_button_left">sobre o reino</a>
 				<?php
-				if(isDirector($_SESSION['byron_gamification']['user']) == '1')
+				if(isDirector($_SESSION['byron_gamification']['user']) == '1'){
 					echo '<a  class="container_profile_top_button_left dropdown" href="submitXP.php?id='.$_SESSION['byron_gamification']['user'].'">distribuir XP</a>';
+				}
 				
 				if(isBardo($_SESSION['byron_gamification']['user']) == '1'){
 					echo'<div class="container_profile_top_button_left dropdown">
 							<div class="dropdown-toggle" data-toggle="dropdown">administrador<span class="caret"></span></div>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" style="color: #303030;" href="./registerForm.php">cadastrar usuário</a></li>
+								<li><a class="dropdown-item" style="color: #303030;" href="../_view/registerForm.php">cadastrar usuário</a></li>
 								<li><a class="dropdown-item" style="color: #303030;"><button class="container_profile_top_button_left" onclick="document.getElementById(\'edit_adm\').style.display=\'block\'">alterar Dados</a></li></button>
 							</ul>
 						</div>';
 				}
 				?>
-
 				<a class="container_profile_top_button_right" href=<?php echo '../_view/pageProfile.php?id='.$_SESSION['byron_gamification']['user']?>>olá, <?php echo $_SESSION['byron_gamification']['user'];?>!</a>
 			</div>
 			<div class="container_profile_left">
@@ -84,7 +90,8 @@ require_once ("../_controller/helper.php");
 						<div style="display: flex; justify-content: space-between">
 							<div class="container_profile_crest">
 								<?php
-									imageClass($userData['class']);
+								    $classe_img = strtolower($userData['class']);
+									imageClass($classe_img);
 								?>
 								<div class="crest_container">
 									<p class="profile_about_title">CLASSE</p>
@@ -104,8 +111,10 @@ require_once ("../_controller/helper.php");
 				<div class="container_profile_right_bottom">
 					<div class="container_profile_right_bottom_left">
 						<p class="profile_about_title" style="margin-top: 0%;">sobre mim</p>
-						<div class="profile_about_box">
-							<p class="profile_about"><?php echo $userData['about'] ?></p>    
+						<div class="profile_about_box ss-container" style="overflow-y: auto;">
+                            <div class="ss-wrapper">
+							<p class="profile_about ss-content" style="word-break: break-all;overflow: auto;"><?php echo $userData['about'] ?></p>
+                            </div>
 						</div>
 					</div>
 					<div class="container_profile_right_bottom_right">
