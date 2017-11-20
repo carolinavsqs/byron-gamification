@@ -117,13 +117,13 @@ $linha          = mysqli_fetch_array($query_result);
             $password       = hash ("sha256", $new_pass);
         }
         else{
-            echo '<script> alert("As duas senhas não erram iguais! O resto foi atualizado");
+            echo '<script> alert("As duas senhas não erram iguais!");
             </script>';
         }
         
     }
     else if(!empty($_POST['new_pasw']) xor !empty($_POST['new_pasw2'])){
-        echo '<script> alert("Um dos campos da senha estava vazio! O resto foi atualizado");
+        echo '<script> alert("Um dos campos da senha estava vazio!");
             </script>';
     }
     else{
@@ -141,14 +141,14 @@ $linha          = mysqli_fetch_array($query_result);
         $_SESSION['byron_gamification']['mbti']             = $new_mbti ;
         $_SESSION['byron_gamification']['about']            = $new_about ;
 
-        echo '<script> alert("Alterado com Sucesso!");
+        echo '<script> alert("Campos alterados com sucesso!");
             window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
         </script>';
         mysqli_close ($conn);
         exit;
     }
     else{
-        echo '<script> alert("Alterado com Sucesso!");
+        echo '<script> alert("Campos não alterados!");
             window.location.href="../_view/pageProfile.php?id='.$linha['user'].'";
         </script>';
     }
