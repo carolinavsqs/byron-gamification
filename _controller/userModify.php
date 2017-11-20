@@ -108,13 +108,23 @@ $linha          = mysqli_fetch_array($query_result);
         $new_about      = $linha['about'];
     }
 
-    if(!empty($_POST['new_pasw']) and $_POST['new_pasw']== $_POST['new_pasw2'])
+    if(!empty($_POST['new_pasw']) and !empty($_POST['new_pasw2']))
     {
-        $new_pass       = $_POST['new_pasw'];
-        $new_pass       = stripslashes($new_pass);
-        $new_pass       = mysqli_real_escape_string($conn,$new_pass);
-        $password       = hash ("sha256", $new_pass);
+        if($_POST['new_pasw']== $_POST['new_pasw2']){
+            $new_pass       = $_POST['new_pasw'];
+            $new_pass       = stripslashes($new_pass);
+            $new_pass       = mysqli_real_escape_string($conn,$new_pass);
+            $password       = hash ("sha256", $new_pass);
+        }
+        else{
+            echo '<script> alert("As duas senhas não erram iguais! O resto foi atualizado");
+            </script>';
+        }
         
+    }
+    else if(!empty($_POST['new_pasw']) xor !empty($_POST['new_pasw2'])){
+        echo '<script> alert("Um dos campos da senha estava vazio! O resto foi atualizado");
+            </script>';
     }
     else{
          $password      = $linha['password'];
